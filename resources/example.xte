@@ -1,0 +1,5393 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xtab version="1.1" xmlns:xt="http://www.XtabML.org/2005/xtab" xmlns="http://www.XtabML.org/2005/xtab">
+  <date>27/10/2025</date>
+  <time>11:47 AM</time>
+  <!--<origin>Pulsar Web which is actually Q v5.18.11.0</origin>-->
+  <user>Miles</user>
+  <!--All Controls Q is Liable to Use-->
+  <controltype name="project" status="primary">
+    <t>Project</t>
+  </controltype>
+  <controltype name="filter" status="primary">
+    <t>Filter</t>
+  </controltype>
+  <controltype name="filters" status="primary">
+    <t>Filters</t>
+  </controltype>
+  <controltype name="weight" status="primary">
+    <t>Weight</t>
+  </controltype>
+  <controltype name="base" status="secondary">
+    <t>Base</t>
+  </controltype>
+  <controltype name="notes" status="secondary">
+    <t>Notes</t>
+  </controltype>
+  <!--All Statistic Types Supported by Q-->
+  <statistictype name="Values">
+    <t>Values</t>
+  </statistictype>
+  <statistictype name="Labels">
+    <t>Labels</t>
+  </statistictype>
+  <statistictype name="Text">
+    <t>Text</t>
+  </statistictype>
+  <statistictype name="TextNoBlanks">
+    <t>Text With No Blanks</t>
+  </statistictype>
+  <statistictype name="UniqueText">
+    <t>Unique Text</t>
+  </statistictype>
+  <statistictype name="Percent">
+    <t>%</t>
+  </statistictype>
+  <statistictype name="RowPercent">
+    <t>Row %</t>
+  </statistictype>
+  <statistictype name="ColumnPercent">
+    <t>Column %</t>
+  </statistictype>
+  <statistictype name="TotalPercent">
+    <t>Total %</t>
+  </statistictype>
+  <statistictype name="PercentExcludingNaN">
+    <t>% Excluding NaN</t>
+  </statistictype>
+  <statistictype name="CumulativePercent">
+    <t>Cumulative %</t>
+  </statistictype>
+  <statistictype name="ProbabilityPercent">
+    <t>Probability %</t>
+  </statistictype>
+  <statistictype name="Coefficient">
+    <t>Coefficient</t>
+  </statistictype>
+  <statistictype name="Average">
+    <t>Average</t>
+  </statistictype>
+  <statistictype name="Correlation">
+    <t>Correlation</t>
+  </statistictype>
+  <statistictype name="Minimum">
+    <t>Minimum</t>
+  </statistictype>
+  <statistictype name="Percentile5">
+    <t>5th Percentile</t>
+  </statistictype>
+  <statistictype name="Percentile25">
+    <t>25th Percentile</t>
+  </statistictype>
+  <statistictype name="Median">
+    <t>Median</t>
+  </statistictype>
+  <statistictype name="Percentile75">
+    <t>75th Percentile</t>
+  </statistictype>
+  <statistictype name="Percentile95">
+    <t>95th Percentile</t>
+  </statistictype>
+  <statistictype name="Maximum">
+    <t>Maximum</t>
+  </statistictype>
+  <statistictype name="Mode">
+    <t>Mode</t>
+  </statistictype>
+  <statistictype name="TrimmedAverage">
+    <t>Trimmed Average</t>
+  </statistictype>
+  <statistictype name="StandardDeviation">
+    <t>Standard Deviation</t>
+  </statistictype>
+  <statistictype name="Range">
+    <t>Range</t>
+  </statistictype>
+  <statistictype name="InterquartileRange">
+    <t>Interquartile Range</t>
+  </statistictype>
+  <statistictype name="Sum">
+    <t>Sum</t>
+  </statistictype>
+  <statistictype name="TStatistic">
+    <t>t-Statistic</t>
+  </statistictype>
+  <statistictype name="ExpectedAverage">
+    <t>Expected Average</t>
+  </statistictype>
+  <statistictype name="ExpectedPercent">
+    <t>Expected %</t>
+  </statistictype>
+  <statistictype name="ExpectedN">
+    <t>Expected n</t>
+  </statistictype>
+  <statistictype name="ExpectedCorrelation">
+    <t>Expected Correlation</t>
+  </statistictype>
+  <statistictype name="Residual">
+    <t>Residual</t>
+  </statistictype>
+  <statistictype name="ResidualPercent">
+    <t>Residual %</t>
+  </statistictype>
+  <statistictype name="Population">
+    <t>Population</t>
+  </statistictype>
+  <statistictype name="PercentResponses">
+    <t>% Responses</t>
+  </statistictype>
+  <statistictype name="PercentRowResponses">
+    <t>% Row Responses</t>
+  </statistictype>
+  <statistictype name="PercentColumnResponses">
+    <t>% Column Responses</t>
+  </statistictype>
+  <statistictype name="PercentTotalResponses">
+    <t>% Total Responses</t>
+  </statistictype>
+  <statistictype name="RowPopulation">
+    <t>Row Population</t>
+  </statistictype>
+  <statistictype name="ColumnPopulation">
+    <t>Column Population</t>
+  </statistictype>
+  <statistictype name="BasePopulation">
+    <t>Base Population</t>
+  </statistictype>
+  <statistictype name="WW">
+    <t>WW</t>
+  </statistictype>
+  <statistictype name="BaseWW">
+    <t>Base WW</t>
+  </statistictype>
+  <statistictype name="ColumnWW">
+    <t>Column WW</t>
+  </statistictype>
+  <statistictype name="RowWW">
+    <t>Row WW</t>
+  </statistictype>
+  <statistictype name="PercentShare">
+    <t>% Share</t>
+  </statistictype>
+  <statistictype name="PercentShareRows">
+    <t>% Row Share</t>
+  </statistictype>
+  <statistictype name="PercentShareColumns">
+    <t>% Column Share</t>
+  </statistictype>
+  <statistictype name="PercentShareTotal">
+    <t>% Total Share</t>
+  </statistictype>
+  <statistictype name="n">
+    <t>n</t>
+  </statistictype>
+  <statistictype name="EffectiveN">
+    <t>Effective n</t>
+  </statistictype>
+  <statistictype name="EffectiveBaseN">
+    <t>Effective Base n</t>
+  </statistictype>
+  <statistictype name="DegreesOfFreedom">
+    <t>d.f.</t>
+  </statistictype>
+  <statistictype name="NObservations">
+    <t>n Observations</t>
+  </statistictype>
+  <statistictype name="ColumnN">
+    <t>Column n</t>
+  </statistictype>
+  <statistictype name="RowN">
+    <t>Row n</t>
+  </statistictype>
+  <statistictype name="BaseN">
+    <t>Base n</t>
+  </statistictype>
+  <statistictype name="EffectiveColumnN">
+    <t>Effective Column n</t>
+  </statistictype>
+  <statistictype name="EffectiveRowN">
+    <t>Effective Row n</t>
+  </statistictype>
+  <statistictype name="MissingN">
+    <t>Missing n</t>
+  </statistictype>
+  <statistictype name="p">
+    <t>p</t>
+  </statistictype>
+  <statistictype name="pCorrected">
+    <t>Corrected p</t>
+  </statistictype>
+  <statistictype name="multipleComparisonAdjustment">
+    <t>Multiple Comparison Adjustment</t>
+  </statistictype>
+  <statistictype name="ZStatistic">
+    <t>z-Statistic</t>
+  </statistictype>
+  <statistictype name="NotDuplicate">
+    <t>Not Duplicate</t>
+  </statistictype>
+  <statistictype name="ColumnNames">
+    <t>Column Names</t>
+  </statistictype>
+  <statistictype name="ColumnsCompared">
+    <t>Columns Compared</t>
+  </statistictype>
+  <statistictype name="ColumnComparisons">
+    <t>Column Comparisons</t>
+  </statistictype>
+  <statistictype name="StandardError">
+    <t>Standard Error</t>
+  </statistictype>
+  <statistictype name="LowerCI">
+    <t>Lower Confidence Interval</t>
+  </statistictype>
+  <statistictype name="UpperCI">
+    <t>Upper Confidence Interval</t>
+  </statistictype>
+  <statistictype name="LowerCIPercent">
+    <t>Lower Confidence Interval %</t>
+  </statistictype>
+  <statistictype name="UpperCIPercent">
+    <t>Upper Confidence Interval %</t>
+  </statistictype>
+  <statistictype name="ColumnStandardError">
+    <t>Column Standard Error</t>
+  </statistictype>
+  <statistictype name="ColumnStandardErrorOfMean">
+    <t>Column Standard Error of Mean</t>
+  </statistictype>
+  <statistictype name="Index">
+    <t>Index</t>
+  </statistictype>
+  <statistictype name="Observation">
+    <t>Observation</t>
+  </statistictype>
+  <control type="project">
+    <t>S195 Regular Frappe and Renewal Concepts</t>
+  </control>
+  <!--FILTERS by CONCEPT_SEEN (X)-->
+  <table name="dd98e8ec-5288-48a0-9fcd-796b40f09fec">
+    <t>FILTERS by CONCEPT_SEEN (X)</t>
+    <control type="base">
+      <t>Total sample; Unweighted; base n = 624</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>Total</t>
+        </element>
+        <element>
+          <t>Frequent</t>
+        </element>
+        <element>
+          <t>Infrequent</t>
+        </element>
+        <element>
+          <t>Male</t>
+        </element>
+        <element>
+          <t>Female</t>
+        </element>
+        <element>
+          <t>20 to 39</t>
+        </element>
+        <element>
+          <t>40 to 59</t>
+        </element>
+        <element>
+          <t>Female 20-29</t>
+        </element>
+        <element>
+          <t>Male 20-29</t>
+        </element>
+        <element>
+          <t>Starbucks Frappe 6M+</t>
+        </element>
+        <element>
+          <t>Ever Purchased Any McD Frappe/Smoothie</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Oreo Frappe</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Mango Smoothie</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Oreo/Mango</t>
+        </element>
+        <element>
+          <t>Seven Eleven Frappe 6m+</t>
+        </element>
+        <element>
+          <t>NET</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <element>
+          <t>BR20401 BM</t>
+        </element>
+        <element>
+          <t>R20401 R1</t>
+        </element>
+        <element>
+          <t>R20402 R2</t>
+        </element>
+        <element>
+          <t>NET</t>
+        </element>
+      </group>
+    </edge>
+    <statistic type="ColumnPercent" />
+    <statistic type="n" />
+    <data>
+      <r>
+        <c>
+          <v>100.000%</v>
+          <v>100.000%</v>
+          <v>100.000%</v>
+          <v>100.000%</v>
+        </c>
+        <c>
+          <v>624.000</v>
+          <v>312.000</v>
+          <v>312.000</v>
+          <v>624.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>52.724%</v>
+          <v>54.167%</v>
+          <v>51.282%</v>
+          <v>52.724%</v>
+        </c>
+        <c>
+          <v>329.000</v>
+          <v>169.000</v>
+          <v>160.000</v>
+          <v>329.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>47.276%</v>
+          <v>45.833%</v>
+          <v>48.718%</v>
+          <v>47.276%</v>
+        </c>
+        <c>
+          <v>295.000</v>
+          <v>143.000</v>
+          <v>152.000</v>
+          <v>295.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>50.000%</v>
+          <v>50.000%</v>
+          <v>50.000%</v>
+          <v>50.000%</v>
+        </c>
+        <c>
+          <v>312.000</v>
+          <v>156.000</v>
+          <v>156.000</v>
+          <v>312.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>50.000%</v>
+          <v>50.000%</v>
+          <v>50.000%</v>
+          <v>50.000%</v>
+        </c>
+        <c>
+          <v>312.000</v>
+          <v>156.000</v>
+          <v>156.000</v>
+          <v>312.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>50.000%</v>
+          <v>50.000%</v>
+          <v>50.000%</v>
+          <v>50.000%</v>
+        </c>
+        <c>
+          <v>312.000</v>
+          <v>156.000</v>
+          <v>156.000</v>
+          <v>312.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>50.000%</v>
+          <v>50.000%</v>
+          <v>50.000%</v>
+          <v>50.000%</v>
+        </c>
+        <c>
+          <v>312.000</v>
+          <v>156.000</v>
+          <v>156.000</v>
+          <v>312.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>12.500%</v>
+          <v>12.500%</v>
+          <v>12.500%</v>
+          <v>12.500%</v>
+        </c>
+        <c>
+          <v>78.000</v>
+          <v>39.000</v>
+          <v>39.000</v>
+          <v>78.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>12.500%</v>
+          <v>12.500%</v>
+          <v>12.500%</v>
+          <v>12.500%</v>
+        </c>
+        <c>
+          <v>78.000</v>
+          <v>39.000</v>
+          <v>39.000</v>
+          <v>78.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>34.295%</v>
+          <v>30.449%</v>
+          <v>38.141%</v>
+          <v>34.295%</v>
+        </c>
+        <c>
+          <v>214.000</v>
+          <v>95.000</v>
+          <v>119.000</v>
+          <v>214.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>46.314%</v>
+          <v>46.474%</v>
+          <v>46.154%</v>
+          <v>46.314%</v>
+        </c>
+        <c>
+          <v>289.000</v>
+          <v>145.000</v>
+          <v>144.000</v>
+          <v>289.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>19.071%</v>
+          <v>19.231%</v>
+          <v>18.910%</v>
+          <v>19.071%</v>
+        </c>
+        <c>
+          <v>119.000</v>
+          <v>60.000</v>
+          <v>59.000</v>
+          <v>119.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>14.263%</v>
+          <v>15.385%</v>
+          <v>13.141%</v>
+          <v>14.263%</v>
+        </c>
+        <c>
+          <v>89.000</v>
+          <v>48.000</v>
+          <v>41.000</v>
+          <v>89.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>24.038%</v>
+          <v>23.397%</v>
+          <v>24.679%</v>
+          <v>24.038%</v>
+        </c>
+        <c>
+          <v>150.000</v>
+          <v>73.000</v>
+          <v>77.000</v>
+          <v>150.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>12.340%</v>
+          <v>14.103%</v>
+          <v>10.577%</v>
+          <v>12.340%</v>
+        </c>
+        <c>
+          <v>77.000</v>
+          <v>44.000</v>
+          <v>33.000</v>
+          <v>77.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>100.000%</v>
+          <v>100.000%</v>
+          <v>100.000%</v>
+          <v>100.000%</v>
+        </c>
+        <c>
+          <v>624.000</v>
+          <v>312.000</v>
+          <v>312.000</v>
+          <v>624.000</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Range PI - TOP 2 BOX filtered by FILTERS-->
+  <table name="c3677876-d96d-4009-875a-795434cd1be4">
+    <t>Range PI - TOP 2 BOX filtered by FILTERS</t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = from 33 to 624; total n = 624; 591 missing; effective sample size = 623 (100%)</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>Total</t>
+        </element>
+        <element>
+          <t>Frequent</t>
+        </element>
+        <element>
+          <t>Infrequent</t>
+        </element>
+        <element>
+          <t>Male</t>
+        </element>
+        <element>
+          <t>Female</t>
+        </element>
+        <element>
+          <t>20 to 39</t>
+        </element>
+        <element>
+          <t>40 to 59</t>
+        </element>
+        <element>
+          <t>Female 20-29</t>
+        </element>
+        <element>
+          <t>Male 20-29</t>
+        </element>
+        <element>
+          <t>Starbucks Frappe 6M+</t>
+        </element>
+        <element>
+          <t>Seven Eleven Frappe 6m+</t>
+        </element>
+        <element>
+          <t>Ever Purchased Any McD Frappe/Smoothie</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Oreo Frappe</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Mango Smoothie</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Oreo/Mango</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <group>
+          <element>
+            <t>BR20401 BM</t>
+          </element>
+          <element>
+            <t>R20401 R1</t>
+          </element>
+          <element>
+            <t>R20402 R2</t>
+          </element>
+        </group>
+        <group>
+          <summary>
+            <t>Base n</t>
+          </summary>
+        </group>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <statistic type="BaseN" />
+    <data>
+      <r>
+        <c>
+          <v>61.028%</v>
+          <v>58.524%</v>
+          <v>61.183%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>312.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>61.707%</v>
+          <v>62.722%</v>
+          <v>60.000%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>160.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>60.271%</v>
+          <v>53.846%</v>
+          <v>62.500%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>143.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>53.210%</v>
+          <v>55.675%</v>
+          <v>47.571%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>68.858%</v>
+          <v>61.367%</v>
+          <v>74.863%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>63.522%</v>
+          <v>64.745%</v>
+          <v>62.189%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>58.534%</v>
+          <v>52.305%</v>
+          <v>60.176%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>74.454%</v>
+          <v>74.491%</v>
+          <v>71.619%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>39.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>62.798%</v>
+          <v>66.565%</v>
+          <v>56.534%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>39.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>77.068%</v>
+          <v>76.661%</v>
+          <v>78.873%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>95.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>81.836%</v>
+          <v>77.359%</v>
+          <v>87.759%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>33.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>78.871%</v>
+          <v>78.532%</v>
+          <v>79.803%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>144.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>86.477%</v>
+          <v>88.302%</v>
+          <v>94.788%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>59.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>86.393%</v>
+          <v>89.334%</v>
+          <v>90.194%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>41.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>86.543%</v>
+          <v>87.545%</v>
+          <v>90.776%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>73.000</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Range PI - TOP BOX filtered by FILTERS-->
+  <table name="8ea2ca8e-3ed0-4943-80c0-675f744daf7f">
+    <t>Range PI - TOP BOX filtered by FILTERS</t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = from 33 to 624; total n = 624; 591 missing; effective sample size = 623 (100%)</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>Total</t>
+        </element>
+        <element>
+          <t>Frequent</t>
+        </element>
+        <element>
+          <t>Infrequent</t>
+        </element>
+        <element>
+          <t>Male</t>
+        </element>
+        <element>
+          <t>Female</t>
+        </element>
+        <element>
+          <t>20 to 39</t>
+        </element>
+        <element>
+          <t>40 to 59</t>
+        </element>
+        <element>
+          <t>Female 20-29</t>
+        </element>
+        <element>
+          <t>Male 20-29</t>
+        </element>
+        <element>
+          <t>Starbucks Frappe 6M+</t>
+        </element>
+        <element>
+          <t>Seven Eleven Frappe 6m+</t>
+        </element>
+        <element>
+          <t>Ever Purchased Any McD Frappe/Smoothie</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Oreo Frappe</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Mango Smoothie</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Oreo/Mango</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <group>
+          <element>
+            <t>BR20401 BM</t>
+          </element>
+          <element>
+            <t>R20401 R1</t>
+          </element>
+          <element>
+            <t>R20402 R2</t>
+          </element>
+        </group>
+        <group>
+          <summary>
+            <t>Base n</t>
+          </summary>
+        </group>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <statistic type="BaseN" />
+    <data>
+      <r>
+        <c>
+          <v>20.556%</v>
+          <v>23.237%</v>
+          <v>19.069%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>312.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>24.647%</v>
+          <v>28.402%</v>
+          <v>24.375%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>160.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>15.999%</v>
+          <v>17.483%</v>
+          <v>13.158%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>143.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>17.363%</v>
+          <v>22.304%</v>
+          <v>16.209%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>23.755%</v>
+          <v>24.169%</v>
+          <v>21.944%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>22.881%</v>
+          <v>29.414%</v>
+          <v>22.656%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>18.232%</v>
+          <v>17.063%</v>
+          <v>15.483%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>29.601%</v>
+          <v>40.905%</v>
+          <v>28.235%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>39.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>24.421%</v>
+          <v>40.940%</v>
+          <v>17.915%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>39.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>30.582%</v>
+          <v>39.812%</v>
+          <v>25.476%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>95.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>41.819%</v>
+          <v>47.506%</v>
+          <v>39.996%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>33.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>33.375%</v>
+          <v>38.573%</v>
+          <v>31.540%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>144.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>42.330%</v>
+          <v>49.951%</v>
+          <v>43.046%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>59.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>47.401%</v>
+          <v>58.200%</v>
+          <v>51.655%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>41.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>41.617%</v>
+          <v>50.669%</v>
+          <v>43.392%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>73.000</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Range PI - TOP 2 BOX filtered by FILTERS-->
+  <table name="2df9fdb6-fe4a-41da-b08f-f3c54f78d374">
+    <t>Range PI - TOP 2 BOX filtered by FILTERS</t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = from 33 to 624; total n = 624; 591 missing; effective sample size = 623 (100%)</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>Total</t>
+        </element>
+        <element>
+          <t>Frequent</t>
+        </element>
+        <element>
+          <t>Infrequent</t>
+        </element>
+        <element>
+          <t>Male</t>
+        </element>
+        <element>
+          <t>Female</t>
+        </element>
+        <element>
+          <t>20 to 39</t>
+        </element>
+        <element>
+          <t>40 to 59</t>
+        </element>
+        <element>
+          <t>Female 20-29</t>
+        </element>
+        <element>
+          <t>Male 20-29</t>
+        </element>
+        <element>
+          <t>Starbucks Frappe 6M+</t>
+        </element>
+        <element>
+          <t>Seven Eleven Frappe 6m+</t>
+        </element>
+        <element>
+          <t>Ever Purchased Any McD Frappe/Smoothie</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Oreo Frappe</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Mango Smoothie</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Oreo/Mango</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <group>
+          <element>
+            <t>BR20401 BM</t>
+          </element>
+          <element>
+            <t>R20401 R1</t>
+          </element>
+          <element>
+            <t>R20402 R2</t>
+          </element>
+        </group>
+        <group>
+          <summary>
+            <t>Base n</t>
+          </summary>
+        </group>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <statistic type="BaseN" />
+    <data>
+      <r>
+        <c>
+          <v>61.028%</v>
+          <v>58.524%</v>
+          <v>61.183%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>312.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>61.707%</v>
+          <v>62.722%</v>
+          <v>60.000%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>160.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>60.271%</v>
+          <v>53.846%</v>
+          <v>62.500%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>143.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>53.210%</v>
+          <v>55.675%</v>
+          <v>47.571%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>68.858%</v>
+          <v>61.367%</v>
+          <v>74.863%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>63.522%</v>
+          <v>64.745%</v>
+          <v>62.189%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>58.534%</v>
+          <v>52.305%</v>
+          <v>60.176%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>74.454%</v>
+          <v>74.491%</v>
+          <v>71.619%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>39.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>62.798%</v>
+          <v>66.565%</v>
+          <v>56.534%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>39.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>77.068%</v>
+          <v>76.661%</v>
+          <v>78.873%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>95.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>81.836%</v>
+          <v>77.359%</v>
+          <v>87.759%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>33.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>78.871%</v>
+          <v>78.532%</v>
+          <v>79.803%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>144.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>86.477%</v>
+          <v>88.302%</v>
+          <v>94.788%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>59.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>86.393%</v>
+          <v>89.334%</v>
+          <v>90.194%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>41.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>86.543%</v>
+          <v>87.545%</v>
+          <v>90.776%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>73.000</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Range PI - TOP BOX filtered by FILTERS-->
+  <table name="3ea021d4-fa91-4aa3-b8a3-660af959fe94">
+    <t>Range PI - TOP BOX filtered by FILTERS</t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = from 33 to 624; total n = 624; 591 missing; effective sample size = 623 (100%)</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>Total</t>
+        </element>
+        <element>
+          <t>Frequent</t>
+        </element>
+        <element>
+          <t>Infrequent</t>
+        </element>
+        <element>
+          <t>Male</t>
+        </element>
+        <element>
+          <t>Female</t>
+        </element>
+        <element>
+          <t>20 to 39</t>
+        </element>
+        <element>
+          <t>40 to 59</t>
+        </element>
+        <element>
+          <t>Female 20-29</t>
+        </element>
+        <element>
+          <t>Male 20-29</t>
+        </element>
+        <element>
+          <t>Starbucks Frappe 6M+</t>
+        </element>
+        <element>
+          <t>Seven Eleven Frappe 6m+</t>
+        </element>
+        <element>
+          <t>Ever Purchased Any McD Frappe/Smoothie</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Oreo Frappe</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Mango Smoothie</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Oreo/Mango</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <group>
+          <element>
+            <t>BR20401 BM</t>
+          </element>
+          <element>
+            <t>R20401 R1</t>
+          </element>
+          <element>
+            <t>R20402 R2</t>
+          </element>
+        </group>
+        <group>
+          <summary>
+            <t>Base n</t>
+          </summary>
+        </group>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <statistic type="BaseN" />
+    <data>
+      <r>
+        <c>
+          <v>20.556%</v>
+          <v>23.237%</v>
+          <v>19.069%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>312.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>24.647%</v>
+          <v>28.402%</v>
+          <v>24.375%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>160.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>15.999%</v>
+          <v>17.483%</v>
+          <v>13.158%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>143.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>17.363%</v>
+          <v>22.304%</v>
+          <v>16.209%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>23.755%</v>
+          <v>24.169%</v>
+          <v>21.944%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>22.881%</v>
+          <v>29.414%</v>
+          <v>22.656%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>18.232%</v>
+          <v>17.063%</v>
+          <v>15.483%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>29.601%</v>
+          <v>40.905%</v>
+          <v>28.235%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>39.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>24.421%</v>
+          <v>40.940%</v>
+          <v>17.915%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>39.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>30.582%</v>
+          <v>39.812%</v>
+          <v>25.476%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>95.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>41.819%</v>
+          <v>47.506%</v>
+          <v>39.996%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>33.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>33.375%</v>
+          <v>38.573%</v>
+          <v>31.540%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>144.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>42.330%</v>
+          <v>49.951%</v>
+          <v>43.046%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>59.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>47.401%</v>
+          <v>58.200%</v>
+          <v>51.655%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>41.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>41.617%</v>
+          <v>50.669%</v>
+          <v>43.392%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>73.000</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Q5-->
+  <table name="609e0d9e-0043-4905-b02d-dd55fdfd7245">
+    <t>Q5</t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = from 266 to 533; total n = 624; 358 missing</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>BR20401 BM</t>
+        </element>
+        <element>
+          <t>R20401 R1</t>
+        </element>
+        <element>
+          <t>R20402 R2</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <element>
+          <t>Choco Frape Oreo Cookie</t>
+        </element>
+        <element>
+          <t>Mango Smoothie</t>
+        </element>
+        <element>
+          <t>Milk Chocolate Frappe (w/o Choco Sauce) </t>
+        </element>
+        <element>
+          <t>Mango Smoothie (Renewed)</t>
+        </element>
+        <element>
+          <t>Milk Chocolate Frappe (w/ Choco Sauce)</t>
+        </element>
+        <element>
+          <t>NET</t>
+        </element>
+      </group>
+    </edge>
+    <statistic type="RowPercent" />
+    <data>
+      <r>
+        <c>
+          <v>70.835%</v>
+          <v>29.165%</v>
+          <v>.000%</v>
+          <v>.000%</v>
+          <v>.000%</v>
+          <v>100.000%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>.000%</v>
+          <v>.000%</v>
+          <v>68.574%</v>
+          <v>31.426%</v>
+          <v>.000%</v>
+          <v>100.000%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>.000%</v>
+          <v>.000%</v>
+          <v>.000%</v>
+          <v>35.522%</v>
+          <v>64.478%</v>
+          <v>100.000%</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Choco PI - TOP 2 BOX by FILTERS-->
+  <table name="49548a6e-fcf9-4bc0-9533-47190e348000">
+    <t>Choco PI - TOP 2 BOX by FILTERS</t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = from 33 to 624; total n = 624; 591 missing; effective sample size = 623 (100%)</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>Total</t>
+        </element>
+        <element>
+          <t>Frequent</t>
+        </element>
+        <element>
+          <t>Infrequent</t>
+        </element>
+        <element>
+          <t>Male</t>
+        </element>
+        <element>
+          <t>Female</t>
+        </element>
+        <element>
+          <t>20 to 39</t>
+        </element>
+        <element>
+          <t>40 to 59</t>
+        </element>
+        <element>
+          <t>Female 20-29</t>
+        </element>
+        <element>
+          <t>Male 20-29</t>
+        </element>
+        <element>
+          <t>Starbucks Frappe 6M+</t>
+        </element>
+        <element>
+          <t>Seven Eleven Frappe 6m+</t>
+        </element>
+        <element>
+          <t>Ever Purchased Any McD Frappe/Smoothie</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Oreo Frappe</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Mango Smoothie</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Oreo/Mango</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <group>
+          <element>
+            <t>BP20401 Choco Frape Oreo Cookie </t>
+          </element>
+          <element>
+            <t>P20401 Milk Chocolate Frappe (w/o Choco Sauce)  </t>
+          </element>
+          <element>
+            <t>P20403 Milk Chocolate Frappe (w/ Choco Sauce) </t>
+          </element>
+        </group>
+        <group>
+          <summary>
+            <t>Base n</t>
+          </summary>
+        </group>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <statistic type="BaseN" />
+    <data>
+      <r>
+        <c>
+          <v>58.845%</v>
+          <v>55.273%</v>
+          <v>59.829%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>312.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>59.190%</v>
+          <v>60.947%</v>
+          <v>56.250%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>160.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>58.461%</v>
+          <v>48.951%</v>
+          <v>63.816%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>143.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>52.150%</v>
+          <v>54.275%</v>
+          <v>47.462%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>65.550%</v>
+          <v>56.269%</v>
+          <v>72.258%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>61.501%</v>
+          <v>59.603%</v>
+          <v>58.895%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>56.190%</v>
+          <v>50.944%</v>
+          <v>60.762%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>74.297%</v>
+          <v>71.849%</v>
+          <v>71.619%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>39.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>61.398%</v>
+          <v>53.601%</v>
+          <v>56.242%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>39.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>78.377%</v>
+          <v>73.572%</v>
+          <v>78.778%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>95.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>85.716%</v>
+          <v>86.388%</v>
+          <v>81.725%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>33.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>77.743%</v>
+          <v>76.350%</v>
+          <v>76.403%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>144.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>93.216%</v>
+          <v>90.030%</v>
+          <v>96.526%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>59.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>84.278%</v>
+          <v>80.949%</v>
+          <v>80.799%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>41.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>87.955%</v>
+          <v>84.787%</v>
+          <v>87.084%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>73.000</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Choco PI - TOP BOX by FILTERS-->
+  <table name="0951ef43-592d-4a5e-825c-6246c10dcc3a">
+    <t>Choco PI - TOP BOX by FILTERS</t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = from 33 to 624; total n = 624; 591 missing; effective sample size = 623 (100%)</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>Total</t>
+        </element>
+        <element>
+          <t>Frequent</t>
+        </element>
+        <element>
+          <t>Infrequent</t>
+        </element>
+        <element>
+          <t>Male</t>
+        </element>
+        <element>
+          <t>Female</t>
+        </element>
+        <element>
+          <t>20 to 39</t>
+        </element>
+        <element>
+          <t>40 to 59</t>
+        </element>
+        <element>
+          <t>Female 20-29</t>
+        </element>
+        <element>
+          <t>Male 20-29</t>
+        </element>
+        <element>
+          <t>Starbucks Frappe 6M+</t>
+        </element>
+        <element>
+          <t>Seven Eleven Frappe 6m+</t>
+        </element>
+        <element>
+          <t>Ever Purchased Any McD Frappe/Smoothie</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Oreo Frappe</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Mango Smoothie</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Oreo/Mango</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <group>
+          <element>
+            <t>BP20401 Choco Frape Oreo Cookie </t>
+          </element>
+          <element>
+            <t>P20401 Milk Chocolate Frappe (w/o Choco Sauce)  </t>
+          </element>
+          <element>
+            <t>P20403 Milk Chocolate Frappe (w/ Choco Sauce) </t>
+          </element>
+        </group>
+        <group>
+          <summary>
+            <t>Base n</t>
+          </summary>
+        </group>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <statistic type="BaseN" />
+    <data>
+      <r>
+        <c>
+          <v>20.326%</v>
+          <v>20.279%</v>
+          <v>20.552%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>312.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>24.580%</v>
+          <v>27.811%</v>
+          <v>21.875%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>160.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>15.587%</v>
+          <v>11.888%</v>
+          <v>19.079%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>143.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>17.913%</v>
+          <v>18.955%</v>
+          <v>18.656%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>22.744%</v>
+          <v>21.601%</v>
+          <v>22.459%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>23.463%</v>
+          <v>24.158%</v>
+          <v>23.828%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>17.190%</v>
+          <v>16.402%</v>
+          <v>17.277%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>28.052%</v>
+          <v>38.113%</v>
+          <v>22.942%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>39.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>21.767%</v>
+          <v>20.166%</v>
+          <v>23.054%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>39.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>30.525%</v>
+          <v>37.628%</v>
+          <v>27.102%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>95.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>39.134%</v>
+          <v>38.342%</v>
+          <v>46.031%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>33.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>33.568%</v>
+          <v>35.596%</v>
+          <v>32.687%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>144.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>51.463%</v>
+          <v>53.109%</v>
+          <v>46.041%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>59.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>40.538%</v>
+          <v>45.746%</v>
+          <v>32.042%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>41.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>44.813%</v>
+          <v>44.989%</v>
+          <v>39.187%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>73.000</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Choco PI - TOP 2 BOX by FILTERS-->
+  <table name="ad00ed0e-8f7b-427a-8e9f-a4e221a0d735">
+    <t>Choco PI - TOP 2 BOX by FILTERS</t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = from 33 to 624; total n = 624; 591 missing; effective sample size = 623 (100%)</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <group>
+          <element>
+            <t>Total</t>
+          </element>
+          <element>
+            <t>Frequent</t>
+          </element>
+          <element>
+            <t>Infrequent</t>
+          </element>
+          <element>
+            <t>Male</t>
+          </element>
+          <element>
+            <t>Female</t>
+          </element>
+          <element>
+            <t>20 to 39</t>
+          </element>
+          <element>
+            <t>40 to 59</t>
+          </element>
+          <element>
+            <t>Female 20-29</t>
+          </element>
+          <element>
+            <t>Male 20-29</t>
+          </element>
+          <element>
+            <t>Starbucks Frappe 6M+</t>
+          </element>
+          <element>
+            <t>Seven Eleven Frappe 6m+</t>
+          </element>
+          <element>
+            <t>Ever Purchased Any McD Frappe/Smoothie</t>
+          </element>
+          <element>
+            <t>Ever Purchased McD Oreo Frappe</t>
+          </element>
+          <element>
+            <t>Ever Purchased McD Mango Smoothie</t>
+          </element>
+          <element>
+            <t>Ever Purchased McD Oreo/Mango</t>
+          </element>
+        </group>
+        <group>
+          <summary>
+            <t>Column Names</t>
+          </summary>
+        </group>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <group>
+          <element>
+            <t>BP20401 Choco Frape Oreo Cookie </t>
+          </element>
+          <element>
+            <t>P20401 Milk Chocolate Frappe (w/o Choco Sauce)  </t>
+          </element>
+          <element>
+            <t>P20403 Milk Chocolate Frappe (w/ Choco Sauce) </t>
+          </element>
+        </group>
+        <group>
+          <summary>
+            <t>Base n</t>
+          </summary>
+        </group>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <statistic type="ColumnComparisons" />
+    <statistic type="BaseN" />
+    <statistic type="ColumnNames" />
+    <data>
+      <r>
+        <c>
+          <v>58.845%</v>
+          <v>55.273%</v>
+          <v>59.829%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>312.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>59.190%</v>
+          <v>60.947%</v>
+          <v>56.250%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>160.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>58.461%</v>
+          <v>48.951%</v>
+          <v>63.816%</v>
+          <x />
+        </c>
+        <c>
+          <v>B</v>
+          <v />
+          <v>B</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>143.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>52.150%</v>
+          <v>54.275%</v>
+          <v>47.462%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>65.550%</v>
+          <v>56.269%</v>
+          <v>72.258%</v>
+          <x />
+        </c>
+        <c>
+          <v>B</v>
+          <v />
+          <v>A B</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>61.501%</v>
+          <v>59.603%</v>
+          <v>58.895%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>56.190%</v>
+          <v>50.944%</v>
+          <v>60.762%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>74.297%</v>
+          <v>71.849%</v>
+          <v>71.619%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>39.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>61.398%</v>
+          <v>53.601%</v>
+          <v>56.242%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>39.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>78.377%</v>
+          <v>73.572%</v>
+          <v>78.778%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>95.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>85.716%</v>
+          <v>86.388%</v>
+          <v>81.725%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>33.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>77.743%</v>
+          <v>76.350%</v>
+          <v>76.403%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>144.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>93.216%</v>
+          <v>90.030%</v>
+          <v>96.526%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>59.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>84.278%</v>
+          <v>80.949%</v>
+          <v>80.799%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>41.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>87.955%</v>
+          <v>84.787%</v>
+          <v>87.084%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>73.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+        <c>
+          <v>A</v>
+          <v>B</v>
+          <v>C</v>
+          <x />
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Choco PI - TOP BOX by FILTERS-->
+  <table name="78dde463-a920-4a37-bf7f-1a6230d908b3">
+    <t>Choco PI - TOP BOX by FILTERS</t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = from 33 to 624; total n = 624; 591 missing; effective sample size = 623 (100%)</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <group>
+          <element>
+            <t>Total</t>
+          </element>
+          <element>
+            <t>Frequent</t>
+          </element>
+          <element>
+            <t>Infrequent</t>
+          </element>
+          <element>
+            <t>Male</t>
+          </element>
+          <element>
+            <t>Female</t>
+          </element>
+          <element>
+            <t>20 to 39</t>
+          </element>
+          <element>
+            <t>40 to 59</t>
+          </element>
+          <element>
+            <t>Female 20-29</t>
+          </element>
+          <element>
+            <t>Male 20-29</t>
+          </element>
+          <element>
+            <t>Starbucks Frappe 6M+</t>
+          </element>
+          <element>
+            <t>Seven Eleven Frappe 6m+</t>
+          </element>
+          <element>
+            <t>Ever Purchased Any McD Frappe/Smoothie</t>
+          </element>
+          <element>
+            <t>Ever Purchased McD Oreo Frappe</t>
+          </element>
+          <element>
+            <t>Ever Purchased McD Mango Smoothie</t>
+          </element>
+          <element>
+            <t>Ever Purchased McD Oreo/Mango</t>
+          </element>
+        </group>
+        <group>
+          <summary>
+            <t>Column Names</t>
+          </summary>
+        </group>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <group>
+          <element>
+            <t>BP20401 Choco Frape Oreo Cookie </t>
+          </element>
+          <element>
+            <t>P20401 Milk Chocolate Frappe (w/o Choco Sauce)  </t>
+          </element>
+          <element>
+            <t>P20403 Milk Chocolate Frappe (w/ Choco Sauce) </t>
+          </element>
+        </group>
+        <group>
+          <summary>
+            <t>Base n</t>
+          </summary>
+        </group>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <statistic type="ColumnComparisons" />
+    <statistic type="BaseN" />
+    <statistic type="ColumnNames" />
+    <data>
+      <r>
+        <c>
+          <v>20.326%</v>
+          <v>20.279%</v>
+          <v>20.552%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>312.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>24.580%</v>
+          <v>27.811%</v>
+          <v>21.875%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>160.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>15.587%</v>
+          <v>11.888%</v>
+          <v>19.079%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>143.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>17.913%</v>
+          <v>18.955%</v>
+          <v>18.656%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>22.744%</v>
+          <v>21.601%</v>
+          <v>22.459%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>23.463%</v>
+          <v>24.158%</v>
+          <v>23.828%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>17.190%</v>
+          <v>16.402%</v>
+          <v>17.277%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>156.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>28.052%</v>
+          <v>38.113%</v>
+          <v>22.942%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>39.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>21.767%</v>
+          <v>20.166%</v>
+          <v>23.054%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>39.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>30.525%</v>
+          <v>37.628%</v>
+          <v>27.102%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>95.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>39.134%</v>
+          <v>38.342%</v>
+          <v>46.031%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>33.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>33.568%</v>
+          <v>35.596%</v>
+          <v>32.687%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>144.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>51.463%</v>
+          <v>53.109%</v>
+          <v>46.041%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>59.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>40.538%</v>
+          <v>45.746%</v>
+          <v>32.042%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>41.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>44.813%</v>
+          <v>44.989%</v>
+          <v>39.187%</v>
+          <x />
+        </c>
+        <c>
+          <v />
+          <v />
+          <v />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <v>73.000</v>
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+      </r>
+      <r>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <x />
+          <x />
+        </c>
+        <c>
+          <v>A</v>
+          <v>B</v>
+          <v>C</v>
+          <x />
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Mango PI - TOP 2 BOX by FILTERS-->
+  <table name="c90bac1b-1cca-4909-b582-651c1150d736">
+    <t>Mango PI - TOP 2 BOX by FILTERS</t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = from 77 to 624; total n = 624; 547 missing; effective sample size = 623 (100%)</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>Total</t>
+        </element>
+        <element>
+          <t>Frequent</t>
+        </element>
+        <element>
+          <t>Infrequent</t>
+        </element>
+        <element>
+          <t>Male</t>
+        </element>
+        <element>
+          <t>Female</t>
+        </element>
+        <element>
+          <t>20 to 39</t>
+        </element>
+        <element>
+          <t>40 to 59</t>
+        </element>
+        <element>
+          <t>Female 20-29</t>
+        </element>
+        <element>
+          <t>Male 20-29</t>
+        </element>
+        <element>
+          <t>Starbucks Frappe 6M+</t>
+        </element>
+        <element>
+          <t>Seven Eleven Frappe 6m+</t>
+        </element>
+        <element>
+          <t>Ever Purchased Any McD Frappe/Smoothie</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Oreo Frappe</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Mango Smoothie</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Oreo/Mango</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <group>
+          <element>
+            <t>BP20402 Mango Smoothie </t>
+          </element>
+          <element>
+            <t>P20402 Mango Smoothie (Renewed) </t>
+          </element>
+        </group>
+        <group>
+          <summary>
+            <t>Base n</t>
+          </summary>
+        </group>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <statistic type="BaseN" />
+    <data>
+      <r>
+        <c>
+          <v>44.679%</v>
+          <v>44.148%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>624.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>47.369%</v>
+          <v>45.494%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>329.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>41.682%</v>
+          <v>42.648%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>295.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>39.106%</v>
+          <v>38.776%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>312.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>50.260%</v>
+          <v>49.528%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>312.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>48.132%</v>
+          <v>47.783%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>312.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>41.227%</v>
+          <v>40.514%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>312.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>61.680%</v>
+          <v>57.789%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>78.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>50.012%</v>
+          <v>47.432%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>78.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>56.950%</v>
+          <v>55.963%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>214.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>59.594%</v>
+          <v>64.722%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>77.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>59.549%</v>
+          <v>60.201%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>289.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>63.021%</v>
+          <v>65.519%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>119.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>89.926%</v>
+          <v>88.835%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>89.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>70.053%</v>
+          <v>71.383%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>150.000</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Mango PI - TOP BOX by FILTERS-->
+  <table name="1ccb76b6-94c9-4dc3-aeb2-e03dc352d63e">
+    <t>Mango PI - TOP BOX by FILTERS</t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = from 77 to 624; total n = 624; 547 missing; effective sample size = 623 (100%)</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>Total</t>
+        </element>
+        <element>
+          <t>Frequent</t>
+        </element>
+        <element>
+          <t>Infrequent</t>
+        </element>
+        <element>
+          <t>Male</t>
+        </element>
+        <element>
+          <t>Female</t>
+        </element>
+        <element>
+          <t>20 to 39</t>
+        </element>
+        <element>
+          <t>40 to 59</t>
+        </element>
+        <element>
+          <t>Female 20-29</t>
+        </element>
+        <element>
+          <t>Male 20-29</t>
+        </element>
+        <element>
+          <t>Starbucks Frappe 6M+</t>
+        </element>
+        <element>
+          <t>Seven Eleven Frappe 6m+</t>
+        </element>
+        <element>
+          <t>Ever Purchased Any McD Frappe/Smoothie</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Oreo Frappe</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Mango Smoothie</t>
+        </element>
+        <element>
+          <t>Ever Purchased McD Oreo/Mango</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <group>
+          <element>
+            <t>BP20402 Mango Smoothie </t>
+          </element>
+          <element>
+            <t>P20402 Mango Smoothie (Renewed) </t>
+          </element>
+        </group>
+        <group>
+          <summary>
+            <t>Base n</t>
+          </summary>
+        </group>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <statistic type="BaseN" />
+    <data>
+      <r>
+        <c>
+          <v>13.025%</v>
+          <v>13.667%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>624.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>15.505%</v>
+          <v>15.505%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>329.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>10.262%</v>
+          <v>11.619%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>295.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>12.551%</v>
+          <v>12.549%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>312.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>13.500%</v>
+          <v>14.787%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>312.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>16.427%</v>
+          <v>16.409%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>312.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>9.623%</v>
+          <v>10.925%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>312.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>21.807%</v>
+          <v>20.566%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>78.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>15.453%</v>
+          <v>16.626%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>78.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>20.636%</v>
+          <v>20.635%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>214.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>30.058%</v>
+          <v>27.453%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>77.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>21.547%</v>
+          <v>21.904%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>289.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>27.906%</v>
+          <v>27.952%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>119.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>45.158%</v>
+          <v>47.475%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>89.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>30.187%</v>
+          <v>31.560%</v>
+          <x />
+        </c>
+        <c>
+          <x />
+          <x />
+          <v>150.000</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--QPOST1 Reasons why likely - Choco-->
+  <table name="24561c86-0ee0-4676-8dc3-18bcf578b49f">
+    <t>QPOST1 Reasons why likely - Choco</t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = from 173 to 624; total n = 624; 451 missing; effective sample size = 623 (100%)</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>Appearance looked tasty</t>
+        </element>
+        <element>
+          <t>Like the flavor</t>
+        </element>
+        <element>
+          <t>Good reward for myself</t>
+        </element>
+        <element>
+          <t>Had the ingredients I like</t>
+        </element>
+        <element>
+          <t>Was big enough</t>
+        </element>
+        <element>
+          <t>Thought authentic/ special item</t>
+        </element>
+        <element>
+          <t>The appearance looks nice/ cute</t>
+        </element>
+        <element>
+          <t>Only offered at Mcd/McCafe</t>
+        </element>
+        <element>
+          <t>The name attracted me</t>
+        </element>
+        <element>
+          <t>Had good value</t>
+        </element>
+        <element>
+          <t>Thought new, unique item</t>
+        </element>
+        <element>
+          <t>I regularly drink this</t>
+        </element>
+        <element>
+          <t>Other</t>
+        </element>
+        <element>
+          <t>PI</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <element>
+          <t>BP20401 Choco Frape Oreo Cookie </t>
+        </element>
+        <element>
+          <t>P20403 Milk Chocolate Frappe (w/ Choco Sauce) </t>
+        </element>
+        <element>
+          <t>P20401 Milk Chocolate Frappe (w/o Choco Sauce)  </t>
+        </element>
+        <element>
+          <t>Row Average</t>
+        </element>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <data>
+      <r>
+        <c>
+          <v>44.259%</v>
+          <v>48.548%</v>
+          <v>44.332%</v>
+          <v>45.713%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>41.838%</v>
+          <v>39.432%</v>
+          <v>41.477%</v>
+          <v>40.915%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>26.847%</v>
+          <v>27.807%</v>
+          <v>27.526%</v>
+          <v>27.393%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>26.072%</v>
+          <v>24.595%</v>
+          <v>22.978%</v>
+          <v>24.548%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>13.812%</v>
+          <v>16.151%</v>
+          <v>12.549%</v>
+          <v>14.171%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>11.305%</v>
+          <v>12.909%</v>
+          <v>14.310%</v>
+          <v>12.841%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>11.103%</v>
+          <v>14.040%</v>
+          <v>9.095%</v>
+          <v>11.413%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>9.199%</v>
+          <v>13.429%</v>
+          <v>9.659%</v>
+          <v>10.763%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>6.493%</v>
+          <v>8.656%</v>
+          <v>12.019%</v>
+          <v>9.056%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>5.388%</v>
+          <v>5.414%</v>
+          <v>7.967%</v>
+          <v>6.256%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>5.886%</v>
+          <v>5.934%</v>
+          <v>5.745%</v>
+          <v>5.855%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>4.361%</v>
+          <v>3.793%</v>
+          <v>3.454%</v>
+          <v>3.869%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>1.106%</v>
+          <v>.551%</v>
+          <v>.598%</v>
+          <v>.752%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>58.845%</v>
+          <v>59.829%</v>
+          <v>55.273%</v>
+          <v>57.982%</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--QPOST2 Reasons why not likely - Choco-->
+  <table name="3a5e22d1-3d25-481d-9cf5-157d57b5f460">
+    <t>QPOST2 Reasons why not likely - Choco</t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = from 125 to 624; total n = 624; 499 missing; effective sample size = 623 (100%)</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>Overpriced</t>
+        </element>
+        <element>
+          <t>Looks too sweet</t>
+        </element>
+        <element>
+          <t>Too high calorie</t>
+        </element>
+        <element>
+          <t>Has no value</t>
+        </element>
+        <element>
+          <t>Don’t like the flavor</t>
+        </element>
+        <element>
+          <t>Too Big</t>
+        </element>
+        <element>
+          <t>Didn't seem tasty</t>
+        </element>
+        <element>
+          <t>Other</t>
+        </element>
+        <element>
+          <t>Had the ingredients I don't like</t>
+        </element>
+        <element>
+          <t>Seems Small</t>
+        </element>
+        <element>
+          <t>PI</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <element>
+          <t>BP20401 Choco Frape Oreo Cookie </t>
+        </element>
+        <element>
+          <t>P20401 Milk Chocolate Frappe (w/o Choco Sauce)  </t>
+        </element>
+        <element>
+          <t>P20403 Milk Chocolate Frappe (w/ Choco Sauce) </t>
+        </element>
+        <element>
+          <t>Row Average</t>
+        </element>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <data>
+      <r>
+        <c>
+          <v>40.942%</v>
+          <v>40.143%</v>
+          <v>43.144%</v>
+          <v>41.410%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>36.438%</v>
+          <v>33.784%</v>
+          <v>36.992%</v>
+          <v>35.738%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>28.083%</v>
+          <v>28.650%</v>
+          <v>20.820%</v>
+          <v>25.851%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>16.276%</v>
+          <v>17.198%</v>
+          <v>18.405%</v>
+          <v>17.293%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>8.178%</v>
+          <v>14.367%</v>
+          <v>6.333%</v>
+          <v>9.626%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>7.412%</v>
+          <v>6.359%</v>
+          <v>9.613%</v>
+          <v>7.795%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>5.033%</v>
+          <v>3.571%</v>
+          <v>3.144%</v>
+          <v>3.916%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>3.118%</v>
+          <v>2.873%</v>
+          <v>.775%</v>
+          <v>2.255%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>1.937%</v>
+          <v>2.134%</v>
+          <v>2.414%</v>
+          <v>2.162%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>1.559%</v>
+          <v>1.437%</v>
+          <v>1.549%</v>
+          <v>1.515%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>26.332%</v>
+          <v>27.263%</v>
+          <v>23.371%</v>
+          <v>25.656%</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--QPOST1 Reasons why likely - Mango-->
+  <table name="0382f594-ca6d-4401-a551-aad770ede549">
+    <t>QPOST1 Reasons why likely - Mango</t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = from 276 to 624; total n = 624; 348 missing; effective sample size = 623 (100%)</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>Like the flavor</t>
+        </element>
+        <element>
+          <t>Appearance looked tasty</t>
+        </element>
+        <element>
+          <t>Had the ingredients I like</t>
+        </element>
+        <element>
+          <t>Good reward for myself</t>
+        </element>
+        <element>
+          <t>Thought authentic/ special item</t>
+        </element>
+        <element>
+          <t>The appearance looks nice/ cute</t>
+        </element>
+        <element>
+          <t>Only offered at Mcd/McCafe</t>
+        </element>
+        <element>
+          <t>The name attracted me</t>
+        </element>
+        <element>
+          <t>Had good value</t>
+        </element>
+        <element>
+          <t>Was big enough</t>
+        </element>
+        <element>
+          <t>Thought new, unique item</t>
+        </element>
+        <element>
+          <t>I regularly drink this</t>
+        </element>
+        <element>
+          <t>Other</t>
+        </element>
+        <element>
+          <t>PI</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <element>
+          <t>BP20402 Mango Smoothie </t>
+        </element>
+        <element>
+          <t>P20402 Mango Smoothie (Renewed) </t>
+        </element>
+        <element>
+          <t>Row Average</t>
+        </element>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <data>
+      <r>
+        <c>
+          <v>43.746%</v>
+          <v>43.499%</v>
+          <v>43.623%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>39.692%</v>
+          <v>39.812%</v>
+          <v>39.752%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>29.738%</v>
+          <v>34.788%</v>
+          <v>32.263%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>20.697%</v>
+          <v>17.668%</v>
+          <v>19.182%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>14.705%</v>
+          <v>17.289%</v>
+          <v>15.997%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>10.685%</v>
+          <v>11.294%</v>
+          <v>10.989%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>8.944%</v>
+          <v>11.122%</v>
+          <v>10.033%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>8.554%</v>
+          <v>7.223%</v>
+          <v>7.889%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>7.934%</v>
+          <v>7.697%</v>
+          <v>7.816%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>7.485%</v>
+          <v>7.577%</v>
+          <v>7.531%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>7.877%</v>
+          <v>6.455%</v>
+          <v>7.166%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>5.766%</v>
+          <v>4.756%</v>
+          <v>5.261%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>.739%</v>
+          <v>.375%</v>
+          <v>.557%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>44.679%</v>
+          <v>44.148%</v>
+          <v>44.413%</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--QPOST2 Reasons why not likely - Mango-->
+  <table name="9f468fb6-28a6-45f7-8d0e-7c0ee3d60748">
+    <t>QPOST2 Reasons why not likely - Mango</t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = from 345 to 624; total n = 624; 279 missing; effective sample size = 623 (100%)</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>Overpriced</t>
+        </element>
+        <element>
+          <t>Don’t like the flavor</t>
+        </element>
+        <element>
+          <t>Looks too sweet</t>
+        </element>
+        <element>
+          <t>Has no value</t>
+        </element>
+        <element>
+          <t>Too high calorie</t>
+        </element>
+        <element>
+          <t>Didn't seem tasty</t>
+        </element>
+        <element>
+          <t>Had the ingredients I don't like</t>
+        </element>
+        <element>
+          <t>Other</t>
+        </element>
+        <element>
+          <t>Too Big</t>
+        </element>
+        <element>
+          <t>Seems Small</t>
+        </element>
+        <element>
+          <t>PI</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <element>
+          <t>BP20402 Mango Smoothie </t>
+        </element>
+        <element>
+          <t>P20402 Mango Smoothie (Renewed) </t>
+        </element>
+        <element>
+          <t>Row Average</t>
+        </element>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <data>
+      <r>
+        <c>
+          <v>34.709%</v>
+          <v>32.118%</v>
+          <v>33.414%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>25.495%</v>
+          <v>27.567%</v>
+          <v>26.531%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>22.091%</v>
+          <v>19.300%</v>
+          <v>20.695%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>15.587%</v>
+          <v>15.204%</v>
+          <v>15.396%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>8.401%</v>
+          <v>9.523%</v>
+          <v>8.962%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>6.991%</v>
+          <v>7.779%</v>
+          <v>7.385%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>5.516%</v>
+          <v>5.463%</v>
+          <v>5.489%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>5.186%</v>
+          <v>4.841%</v>
+          <v>5.013%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>2.600%</v>
+          <v>2.592%</v>
+          <v>2.596%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>2.601%</v>
+          <v>2.004%</v>
+          <v>2.303%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>36.230%</v>
+          <v>36.716%</v>
+          <v>36.473%</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Claims - BP20401 Choco Frape Oreo Cookie-->
+  <table name="83bc6cc5-f4b3-493b-af5f-fc117ecc4c1f">
+    <t>Claims - BP20401 Choco Frape Oreo Cookie</t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = 624; effective sample size = 623 (100%)</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>Made with Oreo® cookies</t>
+        </element>
+        <element>
+          <t>Chocolate flavor and a hint of cocoa bitterness</t>
+        </element>
+        <element>
+          <t>Topped with chocolate sauce</t>
+        </element>
+        <element>
+          <t>Crunchy texture</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <summary>
+          <t>%</t>
+        </summary>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <data>
+      <r>
+        <c>
+          <v>44.674%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>41.455%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>23.003%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>22.983%</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Claims Most - BP20401 Choco Frape Oreo Cookie-->
+  <table name="10909ecf-54e9-49bc-bbb4-a7f9bbe2ba1a">
+    <t>Claims Most - BP20401 Choco Frape Oreo Cookie</t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = 624; effective sample size = 623 (100%)</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>Made with Oreo® cookies</t>
+        </element>
+        <element>
+          <t>Chocolate flavor and a hint of cocoa bitterness</t>
+        </element>
+        <element>
+          <t>Crunchy texture</t>
+        </element>
+        <element>
+          <t>Topped with chocolate sauce</t>
+        </element>
+        <element>
+          <t>None</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <summary>
+          <t>%</t>
+        </summary>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <data>
+      <r>
+        <c>
+          <v>30.967%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>29.148%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>11.143%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>8.945%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>19.798%</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Claims - P20401 Milk Chocolate Frappe (w/o Choco Sauce) -->
+  <table name="41a4e80d-2d3c-4ef7-986b-b518690276be">
+    <t>Claims - P20401 Milk Chocolate Frappe (w/o Choco Sauce) </t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = 312; total n = 624; 312 missing</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>Prepared with a raw chocolate flavor  *Raw chocolate is not used in this product</t>
+        </element>
+        <element>
+          <t>Made with Hokkaido fresh cream *Used in the drink base</t>
+        </element>
+        <element>
+          <t>Chocolate becomes milky!</t>
+        </element>
+        <element>
+          <t>Richer flavor!</t>
+        </element>
+        <element>
+          <t>Sweeter taste!</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <summary>
+          <t>%</t>
+        </summary>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <data>
+      <r>
+        <c>
+          <v>39.983%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>34.530%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>23.143%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>17.898%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>9.780%</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Claims Most - P20401 Milk Chocolate Frappe (w/o Choco Sauce) -->
+  <table name="e5f85caf-7e3e-49cc-8528-2c66290f8d5e">
+    <t>Claims Most - P20401 Milk Chocolate Frappe (w/o Choco Sauce) </t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = 312; total n = 624; 312 missing</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>Prepared with a raw chocolate flavor  *Raw chocolate is not used in this product</t>
+        </element>
+        <element>
+          <t>Made with Hokkaido fresh cream *Used in the drink base</t>
+        </element>
+        <element>
+          <t>Chocolate becomes milky!  </t>
+        </element>
+        <element>
+          <t>Richer flavor!   </t>
+        </element>
+        <element>
+          <t>Sweeter taste!  </t>
+        </element>
+        <element>
+          <t>None</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <summary>
+          <t>%</t>
+        </summary>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <data>
+      <r>
+        <c>
+          <v>29.153%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>24.400%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>12.427%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>8.061%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>3.175%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>22.784%</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Claims - P20402 Mango Smoothie (Renewed)-->
+  <table name="eab1783e-7c9b-431c-b1f3-e85af8561f7b">
+    <t>Claims - P20402 Mango Smoothie (Renewed)</t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = 624; effective sample size = 623 (100%)</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>Increased mango puree</t>
+        </element>
+        <element>
+          <t>Made with Alphonso mango, known as the king of mangoes</t>
+        </element>
+        <element>
+          <t>Extra creamy mango sensation!</t>
+        </element>
+        <element>
+          <t>Thicker mango texture!</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <summary>
+          <t>%</t>
+        </summary>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <data>
+      <r>
+        <c>
+          <v>31.502%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>25.492%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>24.959%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>18.878%</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Claims Most - P20402 Mango Smoothie (Renewed)-->
+  <table name="e86a044c-d951-431a-8528-b11923ba4ef5">
+    <t>Claims Most - P20402 Mango Smoothie (Renewed)</t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = 624; effective sample size = 623 (100%)</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>Increased mango puree</t>
+        </element>
+        <element>
+          <t>Made with Alphonso mango, known as the king of mangoes</t>
+        </element>
+        <element>
+          <t>Extra creamy mango sensation!  </t>
+        </element>
+        <element>
+          <t>Thicker mango texture!  </t>
+        </element>
+        <element>
+          <t>None</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <summary>
+          <t>%</t>
+        </summary>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <data>
+      <r>
+        <c>
+          <v>21.241%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>19.711%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>16.484%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>11.724%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>30.840%</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Claims - P20403 Milk Chocolate Frappe (w/ Choco Sauce)-->
+  <table name="fda92268-0c42-4b54-a61b-a1d61a452df3">
+    <t>Claims - P20403 Milk Chocolate Frappe (w/ Choco Sauce)</t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = 312; total n = 624; 312 missing</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>Made with Hokkaido fresh cream *Used in the drink base</t>
+        </element>
+        <element>
+          <t>Prepared with a raw chocolate flavor  *Raw chocolate is not used in this product</t>
+        </element>
+        <element>
+          <t>Chocolate becomes milky!</t>
+        </element>
+        <element>
+          <t>Topped with chocolate sauce</t>
+        </element>
+        <element>
+          <t>Richer flavor!</t>
+        </element>
+        <element>
+          <t>Sweeter taste!</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <summary>
+          <t>%</t>
+        </summary>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <data>
+      <r>
+        <c>
+          <v>38.141%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>35.451%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>22.767%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>20.607%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>14.165%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>8.675%</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Claims Most - P20403 Milk Chocolate Frappe (w/ Choco Sauce)-->
+  <table name="d7415685-d52d-4c22-b71f-e736e874cabd">
+    <t>Claims Most - P20403 Milk Chocolate Frappe (w/ Choco Sauce)</t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = 312; total n = 624; 312 missing</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>Prepared with a raw chocolate flavor  *Raw chocolate is not used in this product</t>
+        </element>
+        <element>
+          <t>Made with Hokkaido fresh cream *Used in the drink base</t>
+        </element>
+        <element>
+          <t>Topped with chocolate sauce </t>
+        </element>
+        <element>
+          <t>Chocolate becomes milky!  </t>
+        </element>
+        <element>
+          <t>Richer flavor!   </t>
+        </element>
+        <element>
+          <t>Sweeter taste!  </t>
+        </element>
+        <element>
+          <t>None</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <summary>
+          <t>%</t>
+        </summary>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <data>
+      <r>
+        <c>
+          <v>25.897%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>24.671%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>8.327%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>8.016%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>6.735%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>2.580%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>23.773%</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Naming - P20401 Milk Chocolate Frappe (w/o Choco Sauce)  -->
+  <table name="4cef1b90-fac1-47b5-83f8-f4924d743572">
+    <t>Naming - P20401 Milk Chocolate Frappe (w/o Choco Sauce)  </t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = 312; total n = 624; 312 missing</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>Cookies &amp; Chocolate Frappe</t>
+        </element>
+        <element>
+          <t>Milky Chocolate Frappe</t>
+        </element>
+        <element>
+          <t>Creamy Chocolate Frappe</t>
+        </element>
+        <element>
+          <t>Milk Chocolate Frappe</t>
+        </element>
+        <element>
+          <t>Chocolate Frappe</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <summary>
+          <t>%</t>
+        </summary>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <data>
+      <r>
+        <c>
+          <v>30.807%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>21.366%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>21.187%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>19.826%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>16.282%</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Naming most - P20401 Milk Chocolate Frappe (w/o Choco Sauce)  -->
+  <table name="af143851-5eb5-4c4f-968c-7375dec1df0d">
+    <t>Naming most - P20401 Milk Chocolate Frappe (w/o Choco Sauce)  </t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = 312; total n = 624; 312 missing</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>Cookies &amp; Chocolate Frappe</t>
+        </element>
+        <element>
+          <t>Milky Chocolate Frappe</t>
+        </element>
+        <element>
+          <t>Milk Chocolate Frappe</t>
+        </element>
+        <element>
+          <t>Creamy Chocolate Frappe</t>
+        </element>
+        <element>
+          <t>Chocolate Frappe</t>
+        </element>
+        <element>
+          <t>None</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <summary>
+          <t>%</t>
+        </summary>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <data>
+      <r>
+        <c>
+          <v>26.659%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>16.906%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>15.366%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>15.054%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>10.886%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>15.130%</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Naming - P20403 Milk Chocolate Frappe (w/ Choco Sauce) -->
+  <table name="5714166f-e292-452a-93e0-101acdf977f6">
+    <t>Naming - P20403 Milk Chocolate Frappe (w/ Choco Sauce) </t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = 312; total n = 624; 312 missing</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>Cookies &amp; Chocolate Frappe</t>
+        </element>
+        <element>
+          <t>Milk Chocolate Frappe</t>
+        </element>
+        <element>
+          <t>Milky Chocolate Frappe</t>
+        </element>
+        <element>
+          <t>Creamy Chocolate Frappe</t>
+        </element>
+        <element>
+          <t>Chocolate Frappe</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <summary>
+          <t>%</t>
+        </summary>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <data>
+      <r>
+        <c>
+          <v>34.499%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>20.643%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>19.546%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>18.942%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>17.990%</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Naming most - P20403 Milk Chocolate Frappe (w/ Choco Sauce) -->
+  <table name="f32baaab-ef68-4654-ba6f-786c904a66af">
+    <t>Naming most - P20403 Milk Chocolate Frappe (w/ Choco Sauce) </t>
+    <control type="weight">
+      <t>Weight: CLIENT_DEF_FREQ</t>
+    </control>
+    <control type="base">
+      <t>Total sample; Weight: Weight: CLIENT_DEF_FREQ; base n = 312; total n = 624; 312 missing</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>Cookies &amp; Chocolate Frappe</t>
+        </element>
+        <element>
+          <t>Milk Chocolate Frappe</t>
+        </element>
+        <element>
+          <t>Milky Chocolate Frappe</t>
+        </element>
+        <element>
+          <t>Creamy Chocolate Frappe</t>
+        </element>
+        <element>
+          <t>Chocolate Frappe</t>
+        </element>
+        <element>
+          <t>None</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <summary>
+          <t>%</t>
+        </summary>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <data>
+      <r>
+        <c>
+          <v>29.375%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>15.794%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>14.733%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>11.878%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>11.201%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>17.020%</v>
+        </c>
+      </r>
+    </data>
+  </table>
+</xtab>
