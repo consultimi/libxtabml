@@ -49,9 +49,10 @@ impl XtabMLParser {
         let mut current_table: Option<Table> = None;
         let mut current_edge: Option<Edge> = None;
         let mut current_group: Option<Group> = None;
-        let mut current_data_row: Option<DataRow> = None;
+        let mut current_data_row: Option<DataRowSeries> = None;
         let mut current_data_cell: Option<DataCell> = None;
-        
+        let mut row_buffer: Vec<DataRowSeries> = None;
+
         loop {
             match reader.read_event_into(&mut buf) {
                 Ok(Event::Start(e)) => {
@@ -177,7 +178,7 @@ impl XtabMLParser {
                             }
                         }
                         b"r" => {
-                            current_data_row = Some(DataRow { cells: Vec::new() });
+                            current_data_row = Some(DataRowSeries { statistic: None, cells: Vec::new() });
                         }
                         b"c" => {
                             current_data_cell = Some(DataCell::default());
@@ -226,7 +227,7 @@ impl XtabMLParser {
                         }
                         b"summary" => {
                             if !text_buffer.is_empty() {
-                                if let Some(ref mut group) = current_group {
+                                if let Some(ref mut group) =  current_group {
                                     group.summaries.push(Summary {
                                         text: text_buffer.clone(),
                                     });
@@ -255,7 +256,7 @@ impl XtabMLParser {
                         b"c" => {
                             if let Some(cell) = current_data_cell.take() {
                                 if let Some(ref mut row) = current_data_row {
-                                    row.cells.push(cell);
+                                    row.data_row_series.push(cell);
                                 }
                             }
                         }

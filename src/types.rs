@@ -116,10 +116,17 @@ pub struct TableData {
     pub rows: Vec<DataRow>,
 }
 
+/// Represents multiple data series in a row
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct DataRowSeries {
+    pub statistic: Option<Statistic>,
+    pub cells: Vec<DataCell>
+}
+
 /// A row in the data matrix
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct DataRow {
-    pub cells: Vec<DataCell>,
+    pub data_row_series: Vec<DataRowSeries>,
 }
 
 /// A cell in the data matrix

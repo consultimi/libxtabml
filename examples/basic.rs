@@ -30,23 +30,6 @@ fn main() -> Result<()> {
         let (rows, cols) = table.shape();
         println!("\nShape: {} rows × {} columns", rows, cols);
         
-        if let Some(row_edge) = &table.row_edge {
-            if let Some(group) = row_edge.groups.first() {
-                println!("\nRow labels (first {}):", group.elements.len().min(5));
-                for (i, element) in group.elements.iter().take(5).enumerate() {
-                    println!("  {}. {}", i + 1, element.text);
-                }
-            }
-        }
-        
-        if let Some(col_edge) = &table.column_edge {
-            if let Some(group) = col_edge.groups.first() {
-                println!("\nColumn labels (first {}):", group.elements.len().min(5));
-                for (i, element) in group.elements.iter().take(5).enumerate() {
-                    println!("  {}. {}", i + 1, element.text);
-                }
-            }
-        }
         
         // Sample some data
         println!("\nSample data from first statistic:");
