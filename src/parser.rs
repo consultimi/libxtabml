@@ -339,6 +339,17 @@ impl XtabMLParser {
     }
 }
 
+pub fn interleave_split_fold<T>(v: Vec<T>, x: usize) -> Vec<Vec<T>> {
+    assert!(x > 0, "x must be > 0");
+    v.into_iter().enumerate().fold(
+        (0..x).map(|_| Vec::new()).collect::<Vec<_>>(),
+        |mut acc, (i, item)| {
+            acc[i % x].push(item);
+            acc
+        },
+    )
+}
+
 /// Parse an XtabML file from a path
 #[allow(dead_code)]
 pub fn parse_file(path: &str) -> Result<XtabML> {
