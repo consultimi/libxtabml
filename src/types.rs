@@ -8,19 +8,19 @@ pub struct XtabML {
     pub time: Option<String>,
     pub origin: Option<String>,
     pub user: Option<String>,
-    
+
     /// Languages used in the document
     pub languages: Vec<Language>,
-    
+
     /// Control types defined in the document
     pub control_types: Vec<ControlType>,
-    
+
     /// Statistic types defined in the document
     pub statistic_types: Vec<StatisticType>,
-    
+
     /// Report-level controls
     pub controls: Vec<Control>,
-    
+
     /// Tables in the document
     pub tables: Vec<Table>,
 }
@@ -60,19 +60,19 @@ pub struct Control {
 pub struct Table {
     pub name: Option<String>,
     pub title: String,
-    
+
     /// Controls specific to this table (e.g., weight, base)
     pub controls: Vec<Control>,
-    
+
     /// Row edge (axis="r")
     pub row_edge: Option<Edge>,
-    
+
     /// Column edge (axis="c")
     pub column_edge: Option<Edge>,
-    
+
     /// Statistics included in this table
     pub statistics: Vec<Statistic>,
-    
+
     /// The data matrix
     pub data: TableData,
 }
@@ -120,7 +120,7 @@ pub struct TableData {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct DataRowSeries {
     pub statistic: Option<Statistic>,
-    pub cells: Vec<DataCell>
+    pub cells: Vec<DataCell>,
 }
 
 /// A row in the data matrix
@@ -157,62 +157,65 @@ impl Table {
     pub fn statistic_types(&self) -> Vec<&str> {
         self.statistics.iter().map(|s| s.r#type.as_str()).collect()
     }
-    
+
     /// Get the shape of the table (rows, columns)
     pub fn shape(&self) -> (usize, usize) {
         let rows = self.data.rows.len();
         let cols = if rows > 0 {
-            self.data.rows[0].cells.len()
+            self.data.rows[0].data_row_series[0].cells.len()
         } else {
             0
         };
         (rows, cols)
     }
-    
+
     /// Get data for a specific statistic type
     pub fn get_statistic_data(&self, statistic_index: usize) -> Option<Vec<Vec<Option<String>>>> {
         if statistic_index >= self.statistics.len() {
             return None;
         }
-        
+
         let statistics_count = self.statistics.len();
         let _values_per_cell = (self.data.rows.len() / statistics_count).max(1);
-        
+
         let mut result = Vec::new();
-        
+
         // Extract values for this statistic
-        for (row_idx, row) in self.data.rows.iter().enumerate() {
-            if row_idx % statistics_count == statistic_index {
-                let cell_values: Vec<Option<String>> = row.cells.iter()
-                    .map(|cell| {
-                        if cell.is_missing {
-                            None
-                        } else {
-                            cell.value.clone()
-                        }
-                    })
-                    .collect();
-                result.push(cell_values);
-            }
-        }
-        
+        // for (row_idx, row) in self.data.rows.iter().enumerate() {
+        //     if row_idx % statistics_count == statistic_index {
+        //         let cell_values: Vec<Option<String>> = row
+        //             .cells
+        //             .iter()
+        //             .map(|cell| {
+        //                 if cell.is_missing {
+        //                     None
+        //                 } else {
+        //                     cell.value.clone()
+        //                 }
+        //             })
+        //             .collect();
+        //         result.push(cell_values);
+        //     }
+        // }
+
         Some(result)
     }
-    
+
     /// Get row labels from the row edge
     pub fn row_labels(&self) -> Vec<String> {
-        self.row_edge.as_ref()
+        self.row_edge
+            .as_ref()
             .and_then(|e| e.groups.first())
             .map(|g| g.elements.iter().map(|e| e.text.clone()).collect())
             .unwrap_or_default()
     }
-    
+
     /// Get column labels from the column edge
     pub fn column_labels(&self) -> Vec<String> {
-        self.column_edge.as_ref()
+        self.column_edge
+            .as_ref()
             .and_then(|e| e.groups.first())
             .map(|g| g.elements.iter().map(|e| e.text.clone()).collect())
             .unwrap_or_default()
     }
 }
-

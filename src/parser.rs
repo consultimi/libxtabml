@@ -304,7 +304,7 @@ impl XtabMLParser {
                                 // now have a rowbuf full of rows, ensure we have (num_rows %
                                 // num_statistics)=0
                                 assert!(
-                                    (row_buf.len() % table.statistics.len()) == 0,
+                                    row_buf.len().is_multiple_of(table.statistics.len()),
                                     "Incorrect number of rows found given the number of statistics",
                                 );
                                 // TODO divide the buffer into DataRowSeries and push to table
