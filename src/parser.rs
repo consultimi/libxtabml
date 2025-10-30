@@ -1,4 +1,5 @@
 use crate::{types::*, Result, XtabMLError};
+use quick_xml::de::NoEntityResolver;
 use quick_xml::events::Event;
 use quick_xml::Reader;
 
@@ -46,9 +47,11 @@ impl XtabMLParser {
         let mut current_table: Option<Table> = None;
         let mut current_edge: Option<Edge> = None;
         let mut current_group: Option<Group> = None;
-        let mut current_data_row: Option<DataRowSeries> = None;
+        let mut current_data_row: Option<DataRow> = None;
+        let mut current_data_row_series: Option<DataRowSeries> = None;
         let mut current_data_cell: Option<DataCell> = None;
         let mut row_buf: Vec<DataRowSeries> = Vec::new();
+        let mut current_statistic: Option<Statistic> = None;
 
         loop {
             match reader.read_event_into(&mut buf) {
@@ -198,16 +201,30 @@ impl XtabMLParser {
                             }
                         }
                         b"r" => {
-                            current_data_row = Some(DataRowSeries {
+                            if let Some(ref table) = current_table {
+                                current_data_row = Some(DataRow {
+                                    data_row_series: table
+                                        .statistics
+                                        .iter()
+                                        .map(|_stat| DataRowSeries {
+                                            statistic: Some(_stat.clone()),
+                                            cells: Vec::new(),
+                                        })
+                                        .collect(),
+                                });
+                            }
+                        }
+                        b"c" => {
+                            // start a statistic entry for this row
+                            current_data_row_series = Some(DataRowSeries {
                                 statistic: None,
                                 cells: Vec::new(),
                             });
                         }
-                        b"c" => {
-                            current_data_cell = Some(DataCell::default());
-                        }
                         b"v" => {
-                            text_buffer.clear();
+                            // strt a cell
+
+                            current_data_cell = Some(DataCell::default());
                         }
                         b"x" => {
                             // Empty element indicating missing value
