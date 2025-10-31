@@ -1,3 +1,5 @@
+use std::iter;
+
 use crate::{types::*, Result, XtabMLError};
 use quick_xml::de::NoEntityResolver;
 use quick_xml::events::Event;
@@ -48,13 +50,13 @@ impl XtabMLParser {
         let mut current_edge: Option<Edge> = None;
         let mut current_group: Option<Group> = None;
         let mut current_data_row: Option<DataRow> = None;
-        let mut current_data_row_series: Option<DataRowSeries> = None;
+        let mut current_data_row_series_iter = None;
+        let mut current_data_row_series = None;
         let mut current_data_cell: Option<DataCell> = None;
-        let mut row_buf: Vec<DataRowSeries> = Vec::new();
-        let mut current_statistic: Option<Statistic> = None;
 
         loop {
-            match reader.read_event_into(&mut buf) {
+            let event = reader.read_event_into(&mut buf);
+            match event {
                 Ok(Event::Start(e)) => {
                     let name = e.name();
                     let name_str = String::from_utf8_lossy(name.as_ref()).to_string();
@@ -183,23 +185,23 @@ impl XtabMLParser {
                         b"summary" => {
                             text_buffer.clear();
                         }
-                        b"statistic" => {
-                            if let Some(ref mut table) = current_table {
-                                let mut stat_type = String::new();
-                                for attr in e.attributes() {
-                                    let attr = attr.unwrap();
-                                    if attr.key.as_ref() == b"type" {
-                                        stat_type = String::from_utf8(attr.value.to_vec())
-                                            .map_err(|_| {
-                                                XtabMLError::InvalidStructure(
-                                                    "Invalid UTF-8 in statistic type".to_string(),
-                                                )
-                                            })?;
-                                    }
-                                }
-                                table.statistics.push(Statistic { r#type: stat_type });
-                            }
-                        }
+                        // b"statistic" => {
+                        //     if let Some(ref mut table) = current_table {
+                        //         let mut stat_type = String::new();
+                        //         for attr in e.attributes() {
+                        //             let attr = attr.unwrap();
+                        //             if attr.key.as_ref() == b"type" {
+                        //                 stat_type = String::from_utf8(attr.value.to_vec())
+                        //                     .map_err(|_| {
+                        //                         XtabMLError::InvalidStructure(
+                        //                             "Invalid UTF-8 in statistic type".to_string(),
+                        //                         )
+                        //                     })?;
+                        //             }
+                        //         }
+                        //         table.statistics.push(Statistic { r#type: stat_type });
+                        //     }
+                        // }
                         b"r" => {
                             if let Some(ref table) = current_table {
                                 current_data_row = Some(DataRow {
@@ -212,19 +214,26 @@ impl XtabMLParser {
                                         })
                                         .collect(),
                                 });
+
+                                if let Some(ref mut datarow) = current_data_row {
+                                    current_data_row_series_iter =
+                                        Some(datarow.data_row_series.iter_mut());
+                                }
                             }
                         }
                         b"c" => {
                             // start a statistic entry for this row
-                            current_data_row_series = Some(DataRowSeries {
-                                statistic: None,
-                                cells: Vec::new(),
-                            });
+                            if let Some(ref mut row) = current_data_row_series_iter {
+                                current_data_row_series = row.next();
+                            }
                         }
                         b"v" => {
                             // strt a cell
-
                             current_data_cell = Some(DataCell::default());
+                            // println!("{:?}", e);
+                            // for attr in e.attributes() {
+                            //     println!("{:?}", attr);
+                            // }
                         }
                         b"x" => {
                             // Empty element indicating missing value
@@ -233,7 +242,9 @@ impl XtabMLParser {
                                 cell.value = None;
                             }
                         }
-                        _ => {}
+                        _ => {
+                            //println!("UNMATCHED EVENT IN START: {:?}", name);
+                        }
                     }
                 }
 
@@ -246,7 +257,7 @@ impl XtabMLParser {
                             // Text element - use the buffer
                             let text = text_buffer.clone();
                             text_buffer.clear();
-
+                            //println!("INSIDE TEXT WITH VALUE: {}", text);
                             // Determine where to put the text based on context
                             if let Some(ref mut table) = current_table {
                                 if table.title.is_empty() && path_stack.iter().any(|p| p == "table")
@@ -286,6 +297,8 @@ impl XtabMLParser {
                         b"edge" => {
                             if let Some(edge) = current_edge.take() {
                                 if let Some(ref mut table) = current_table {
+                                    // println!("INSIDE EDGE WITH TEXT BUFFER : {}", text_buffer);
+
                                     if edge.axis == "r" {
                                         table.row_edge = Some(edge);
                                     } else if edge.axis == "c" {
@@ -295,41 +308,43 @@ impl XtabMLParser {
                             }
                         }
                         b"c" => {
-                            if let Some(cell) = current_data_cell.take() {
-                                if let Some(ref mut row) = current_data_row {
-                                    row.cells.push(cell);
-                                }
-                            }
+                            //if let Some(ref row) = current_data_row {
+                            //    current_data_row_series = row.data_row_series.iter().next();
+                            //}
                         }
                         b"v" => {
                             // Value element
-                            if let Some(ref mut cell) = current_data_cell {
+                            //println!("{:?}", text_buffer);
+                            if let Some(ref mut cell) = current_data_cell.take() {
                                 if !text_buffer.is_empty() {
                                     cell.value = Some(text_buffer.clone());
                                     cell.is_missing = false;
                                 }
-                                text_buffer.clear();
+
+                                if let Some(ref mut row) = current_data_row_series {
+                                    row.cells.push(cell.clone());
+                                }
                             }
                         }
                         b"r" => {
                             if let Some(row) = current_data_row.take() {
-                                row_buf.push(row);
+                                if let Some(ref mut table) = current_table {
+                                    table.data.rows.push(row);
+                                }
                             }
                         }
                         b"table" => {
                             if let Some(table) = current_table.take() {
                                 // now have a rowbuf full of rows, ensure we have (num_rows %
                                 // num_statistics)=0
-                                assert!(
-                                    row_buf.len().is_multiple_of(table.statistics.len()),
-                                    "Incorrect number of rows found given the number of statistics",
-                                );
                                 // TODO divide the buffer into DataRowSeries and push to table
 
                                 xtabml.tables.push(table);
                             }
                         }
-                        _ => {}
+                        _ => {
+                            println!("Got unexpected key: {:?}", name);
+                        }
                     }
                 }
 
@@ -344,10 +359,39 @@ impl XtabMLParser {
                         }
                     }
                 }
+                Ok(Event::Empty(e)) => {
+                    let name = e.name();
 
+                    match name.as_ref() {
+                        b"statistic" => {
+                            if let Some(ref mut table) = current_table {
+                                let mut stat_type = String::new();
+                                //println!("INSIDE STATISTICS: text_buffer is {}", text_buffer);
+                                for attr in e.attributes() {
+                                    let attr = attr.unwrap();
+                                    if attr.key.as_ref() == b"type" {
+                                        stat_type = String::from_utf8(attr.value.to_vec())
+                                            .map_err(|_| {
+                                                XtabMLError::InvalidStructure(
+                                                    "Invalid UTF-8 in statistic type".to_string(),
+                                                )
+                                            })?;
+                                    }
+                                }
+                                table.statistics.push(Statistic { r#type: stat_type });
+                            }
+                        }
+                        _ => {
+                            //println!("Got other name: {:?}", name.as_ref());
+                        }
+                    }
+                    //println!("Got empty with attributes: {:?}", e.attributes());
+                }
                 Ok(Event::Eof) => break,
                 Err(e) => return Err(XtabMLError::XmlParse(e)),
-                _ => {}
+                _ => {
+                    //println!("GOT UNMATCHED EVENT: {:?}", event);
+                }
             }
             buf.clear();
         }
