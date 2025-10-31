@@ -1,7 +1,4 @@
-use std::iter;
-
 use crate::{types::*, Result, XtabMLError};
-use quick_xml::de::NoEntityResolver;
 use quick_xml::events::Event;
 use quick_xml::Reader;
 
@@ -50,8 +47,7 @@ impl XtabMLParser {
         let mut current_edge: Option<Edge> = None;
         let mut current_group: Option<Group> = None;
         let mut current_data_row: Option<DataRow> = None;
-        let mut current_data_row_series_iter = None;
-        let mut current_data_row_series = None;
+        let mut current_data_row_series_index: usize = 0;
         let mut current_data_cell: Option<DataCell> = None;
 
         loop {
@@ -214,18 +210,12 @@ impl XtabMLParser {
                                         })
                                         .collect(),
                                 });
-
-                                if let Some(ref mut datarow) = current_data_row {
-                                    current_data_row_series_iter =
-                                        Some(datarow.data_row_series.iter_mut());
-                                }
+                                current_data_row_series_index = 0;
                             }
                         }
                         b"c" => {
                             // start a statistic entry for this row
-                            if let Some(ref mut row) = current_data_row_series_iter {
-                                current_data_row_series = row.next();
-                            }
+                            // current_data_row_series_index will be used to access the right series
                         }
                         b"v" => {
                             // strt a cell
@@ -308,9 +298,8 @@ impl XtabMLParser {
                             }
                         }
                         b"c" => {
-                            //if let Some(ref row) = current_data_row {
-                            //    current_data_row_series = row.data_row_series.iter().next();
-                            //}
+                            // Move to next series in the row
+                            current_data_row_series_index += 1;
                         }
                         b"v" => {
                             // Value element
@@ -321,8 +310,10 @@ impl XtabMLParser {
                                     cell.is_missing = false;
                                 }
 
-                                if let Some(ref mut row) = current_data_row_series {
-                                    row.cells.push(cell.clone());
+                                if let Some(ref mut row) = current_data_row {
+                                    if current_data_row_series_index < row.data_row_series.len() {
+                                        row.data_row_series[current_data_row_series_index].cells.push(cell.clone());
+                                    }
                                 }
                             }
                         }
@@ -379,6 +370,18 @@ impl XtabMLParser {
                                     }
                                 }
                                 table.statistics.push(Statistic { r#type: stat_type });
+                            }
+                        }
+                        b"x" => {
+                            // Empty element indicating missing value
+                            let missing_cell = DataCell {
+                                is_missing: true,
+                                value: None,
+                            };
+                            if let Some(ref mut row) = current_data_row {
+                                if current_data_row_series_index < row.data_row_series.len() {
+                                    row.data_row_series[current_data_row_series_index].cells.push(missing_cell);
+                                }
                             }
                         }
                         _ => {
