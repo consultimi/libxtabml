@@ -312,10 +312,13 @@ impl XtabMLParser {
 
                                 if let Some(ref mut row) = current_data_row {
                                     if current_data_row_series_index < row.data_row_series.len() {
-                                        row.data_row_series[current_data_row_series_index].cells.push(cell.clone());
+                                        row.data_row_series[current_data_row_series_index]
+                                            .cells
+                                            .push(cell.clone());
                                     }
                                 }
                             }
+                            text_buffer.clear();
                         }
                         b"r" => {
                             if let Some(row) = current_data_row.take() {
@@ -380,7 +383,9 @@ impl XtabMLParser {
                             };
                             if let Some(ref mut row) = current_data_row {
                                 if current_data_row_series_index < row.data_row_series.len() {
-                                    row.data_row_series[current_data_row_series_index].cells.push(missing_cell);
+                                    row.data_row_series[current_data_row_series_index]
+                                        .cells
+                                        .push(missing_cell);
                                 }
                             }
                         }
