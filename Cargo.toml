@@ -2,7 +2,7 @@
 name = "libxtabml"
 version = "0.1.0"
 edition = "2021"
-authors = ["Miles"]
+authors = ["Miles Gard <miles@consultimi.com>"]
 
 [dependencies]
 quick-xml = { version = "0.31", features = ["serialize"] }

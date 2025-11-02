@@ -4,6 +4,10 @@
 
 `libxtabml` is a Rust library for parsing XtabML (Survey Table Interchange Format) files. XtabML is an XML-based format for describing survey cross-tabulation tables, commonly used in market research and survey analysis.
 
+See [https://ascconference.org/xtabml-survey-table-interchange-format/] for more information.
+
+This parser is a work-in-progress, parsing works but is not yet perfect.
+
 ## Project Structure
 
 ```
@@ -13,10 +17,11 @@ libxtabml/
 ├── ARCHITECTURE.md     # This file
 ├── src/
 │   ├── lib.rs          # Library root, exports public API
-│   ├── types.rs         # Data structures representing XtabML
-│   └── parser.rs        # XML parsing implementation
+│   ├── types.rs        # Data structures representing XtabML
+│   └── parser.rs       # XML parsing implementation
 ├── examples/
-│   └── basic.rs         # Example usage
+│   └── basic.rs        # Basic Example usage
+│   └── texttables.rs   # Prints tables from the example in plaintext
 └── resources/
     ├── example.xte      # Sample XtabML file
     └── XtabML-specification_1.1.pdf  # Specification reference
@@ -35,6 +40,8 @@ Defines all data structures that represent an XtabML document:
 - **Element**: Individual item (label) in a group
 - **Control**: Metadata (weight, base, etc.)
 - **DataCell**: Individual cell value or missing indicator
+- DataRowSeries: A collection of cells defined by a single statistic (e.g. ColumnPercent) 
+- DataRow: A collection of DataRowSeries
 
 All types derive `Serialize` and `Deserialize` for JSON/other format support.
 
