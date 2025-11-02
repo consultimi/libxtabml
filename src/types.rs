@@ -178,7 +178,7 @@ impl Table {
         let statistics_count = self.statistics.len();
         let _values_per_cell = (self.data.rows.len() / statistics_count).max(1);
 
-        let mut result = Vec::new();
+        let result = Vec::new();
 
         // Extract values for this statistic
         // for (row_idx, row) in self.data.rows.iter().enumerate() {
