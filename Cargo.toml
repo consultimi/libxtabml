@@ -3,6 +3,13 @@ name = "libxtabml"
 version = "0.1.0"
 edition = "2021"
 authors = ["Miles Gard <miles@consultimi.com>"]
+license = "MIT"
+description = "Library for parsing xtabml XML files"
+repository = "https://github.com/consultimi/libxtabml"
+keywords = ["xml", "parser", "parsing"]
+categories = ["parsing"]
+readme = "README.md"
+
 
 [dependencies]
 quick-xml = { version = "0.31", features = ["serialize"] }
