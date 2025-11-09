@@ -4,6 +4,7 @@ fn main() -> Result<()> {
     // Parse the example file
     let xtab = XtabMLParser::parse_file("resources/example.xte")?;
 
+    println!("{:?}", xtab);
     println!("=== XtabML Document ===\n");
     println!("Version: {}", xtab.version);
     println!("Date: {:?}", xtab.date);

@@ -1,3 +1,5 @@
+use std::thread::current;
+
 use crate::{types::*, Result, XtabMLError};
 use quick_xml::events::Event;
 use quick_xml::Reader;
@@ -49,6 +51,8 @@ impl XtabMLParser {
         let mut current_data_row: Option<DataRow> = None;
         let mut current_data_row_series_index: usize = 0;
         let mut current_data_cell: Option<DataCell> = None;
+        let mut current_element: Option<Element> = None;
+        let mut current_element_index: i32 = 0;
 
         loop {
             let event = reader.read_event_into(&mut buf);
@@ -174,9 +178,15 @@ impl XtabMLParser {
                                 elements: Vec::new(),
                                 summaries: Vec::new(),
                             });
+                            current_element = None;
+                            current_element_index = 0;
                         }
                         b"element" => {
-                            text_buffer.clear();
+                            //text_buffer.clear();
+                            current_element = Some(Element {
+                                text: "".to_string(),
+                                index: None,
+                            })
                         }
                         b"summary" => {
                             text_buffer.clear();
@@ -253,19 +263,30 @@ impl XtabMLParser {
                                 if table.title.is_empty() && path_stack.iter().any(|p| p == "table")
                                 {
                                     table.title = text;
+                                } else if current_element.is_some() {
+                                    if let Some(ref mut element) = current_element {
+                                        element.text = text;
+                                        element.index = Some(current_element_index);
+                                        current_element_index += 1;
+                                    }
+                                    //println!(
+                                    //    "INSIDE TEXT WITH GROUP: {:?} AND element: {:?}",
+                                    //    current_group, current_
+                                    //    element
+                                    //);
                                 }
                             }
                         }
                         b"element" => {
-                            if !text_buffer.is_empty() {
-                                if let Some(ref mut group) = current_group {
-                                    group.elements.push(Element {
-                                        text: text_buffer.clone(),
-                                        index: None,
-                                    });
+                            //if !text_buffer.is_empty() {
+                            if let Some(ref mut group) = current_group {
+                                if let Some(ref mut element) = current_element {
+                                    group.elements.push(element.clone());
+                                    current_element = None;
                                 }
-                                text_buffer.clear();
                             }
+                            //text_buffer.clear();
+                            //}
                         }
                         b"summary" => {
                             if !text_buffer.is_empty() {
@@ -298,7 +319,6 @@ impl XtabMLParser {
                             }
                         }
                         b"c" => {
-                            // Move to next series in the row
                             current_data_row_series_index += 1;
                         }
                         b"v" => {
