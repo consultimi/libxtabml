@@ -1,0 +1,1104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xtab version="1.1" xmlns:xt="http://www.XtabML.org/2005/xtab" xmlns="http://www.XtabML.org/2005/xtab">
+  <date>16/11/2025</date>
+  <time>8:52 AM</time>
+  <!--<origin>Pulsar Web which is actually Q v5.18.12.0</origin>-->
+  <user>Miles</user>
+  <!--All Controls Q is Liable to Use-->
+  <controltype name="project" status="primary">
+    <t>Project</t>
+  </controltype>
+  <controltype name="filter" status="primary">
+    <t>Filter</t>
+  </controltype>
+  <controltype name="filters" status="primary">
+    <t>Filters</t>
+  </controltype>
+  <controltype name="weight" status="primary">
+    <t>Weight</t>
+  </controltype>
+  <controltype name="base" status="secondary">
+    <t>Base</t>
+  </controltype>
+  <controltype name="notes" status="secondary">
+    <t>Notes</t>
+  </controltype>
+  <!--All Statistic Types Supported by Q-->
+  <statistictype name="Values">
+    <t>Values</t>
+  </statistictype>
+  <statistictype name="Labels">
+    <t>Labels</t>
+  </statistictype>
+  <statistictype name="Text">
+    <t>Text</t>
+  </statistictype>
+  <statistictype name="TextNoBlanks">
+    <t>Text With No Blanks</t>
+  </statistictype>
+  <statistictype name="UniqueText">
+    <t>Unique Text</t>
+  </statistictype>
+  <statistictype name="Percent">
+    <t>%</t>
+  </statistictype>
+  <statistictype name="RowPercent">
+    <t>Row %</t>
+  </statistictype>
+  <statistictype name="ColumnPercent">
+    <t>Column %</t>
+  </statistictype>
+  <statistictype name="TotalPercent">
+    <t>Total %</t>
+  </statistictype>
+  <statistictype name="PercentExcludingNaN">
+    <t>% Excluding NaN</t>
+  </statistictype>
+  <statistictype name="CumulativePercent">
+    <t>Cumulative %</t>
+  </statistictype>
+  <statistictype name="ProbabilityPercent">
+    <t>Probability %</t>
+  </statistictype>
+  <statistictype name="Coefficient">
+    <t>Coefficient</t>
+  </statistictype>
+  <statistictype name="Average">
+    <t>Average</t>
+  </statistictype>
+  <statistictype name="Correlation">
+    <t>Correlation</t>
+  </statistictype>
+  <statistictype name="Minimum">
+    <t>Minimum</t>
+  </statistictype>
+  <statistictype name="Percentile5">
+    <t>5th Percentile</t>
+  </statistictype>
+  <statistictype name="Percentile25">
+    <t>25th Percentile</t>
+  </statistictype>
+  <statistictype name="Median">
+    <t>Median</t>
+  </statistictype>
+  <statistictype name="Percentile75">
+    <t>75th Percentile</t>
+  </statistictype>
+  <statistictype name="Percentile95">
+    <t>95th Percentile</t>
+  </statistictype>
+  <statistictype name="Maximum">
+    <t>Maximum</t>
+  </statistictype>
+  <statistictype name="Mode">
+    <t>Mode</t>
+  </statistictype>
+  <statistictype name="TrimmedAverage">
+    <t>Trimmed Average</t>
+  </statistictype>
+  <statistictype name="StandardDeviation">
+    <t>Standard Deviation</t>
+  </statistictype>
+  <statistictype name="Range">
+    <t>Range</t>
+  </statistictype>
+  <statistictype name="InterquartileRange">
+    <t>Interquartile Range</t>
+  </statistictype>
+  <statistictype name="Sum">
+    <t>Sum</t>
+  </statistictype>
+  <statistictype name="TStatistic">
+    <t>t-Statistic</t>
+  </statistictype>
+  <statistictype name="ExpectedAverage">
+    <t>Expected Average</t>
+  </statistictype>
+  <statistictype name="ExpectedPercent">
+    <t>Expected %</t>
+  </statistictype>
+  <statistictype name="ExpectedN">
+    <t>Expected n</t>
+  </statistictype>
+  <statistictype name="ExpectedCorrelation">
+    <t>Expected Correlation</t>
+  </statistictype>
+  <statistictype name="Residual">
+    <t>Residual</t>
+  </statistictype>
+  <statistictype name="ResidualPercent">
+    <t>Residual %</t>
+  </statistictype>
+  <statistictype name="Population">
+    <t>Population</t>
+  </statistictype>
+  <statistictype name="PercentResponses">
+    <t>% Responses</t>
+  </statistictype>
+  <statistictype name="PercentRowResponses">
+    <t>% Row Responses</t>
+  </statistictype>
+  <statistictype name="PercentColumnResponses">
+    <t>% Column Responses</t>
+  </statistictype>
+  <statistictype name="PercentTotalResponses">
+    <t>% Total Responses</t>
+  </statistictype>
+  <statistictype name="RowPopulation">
+    <t>Row Population</t>
+  </statistictype>
+  <statistictype name="ColumnPopulation">
+    <t>Column Population</t>
+  </statistictype>
+  <statistictype name="BasePopulation">
+    <t>Base Population</t>
+  </statistictype>
+  <statistictype name="WW">
+    <t>WW</t>
+  </statistictype>
+  <statistictype name="BaseWW">
+    <t>Base WW</t>
+  </statistictype>
+  <statistictype name="ColumnWW">
+    <t>Column WW</t>
+  </statistictype>
+  <statistictype name="RowWW">
+    <t>Row WW</t>
+  </statistictype>
+  <statistictype name="PercentShare">
+    <t>% Share</t>
+  </statistictype>
+  <statistictype name="PercentShareRows">
+    <t>% Row Share</t>
+  </statistictype>
+  <statistictype name="PercentShareColumns">
+    <t>% Column Share</t>
+  </statistictype>
+  <statistictype name="PercentShareTotal">
+    <t>% Total Share</t>
+  </statistictype>
+  <statistictype name="n">
+    <t>n</t>
+  </statistictype>
+  <statistictype name="EffectiveN">
+    <t>Effective n</t>
+  </statistictype>
+  <statistictype name="EffectiveBaseN">
+    <t>Effective Base n</t>
+  </statistictype>
+  <statistictype name="DegreesOfFreedom">
+    <t>d.f.</t>
+  </statistictype>
+  <statistictype name="NObservations">
+    <t>n Observations</t>
+  </statistictype>
+  <statistictype name="ColumnN">
+    <t>Column n</t>
+  </statistictype>
+  <statistictype name="RowN">
+    <t>Row n</t>
+  </statistictype>
+  <statistictype name="BaseN">
+    <t>Base n</t>
+  </statistictype>
+  <statistictype name="EffectiveColumnN">
+    <t>Effective Column n</t>
+  </statistictype>
+  <statistictype name="EffectiveRowN">
+    <t>Effective Row n</t>
+  </statistictype>
+  <statistictype name="MissingN">
+    <t>Missing n</t>
+  </statistictype>
+  <statistictype name="p">
+    <t>p</t>
+  </statistictype>
+  <statistictype name="pCorrected">
+    <t>Corrected p</t>
+  </statistictype>
+  <statistictype name="multipleComparisonAdjustment">
+    <t>Multiple Comparison Adjustment</t>
+  </statistictype>
+  <statistictype name="ZStatistic">
+    <t>z-Statistic</t>
+  </statistictype>
+  <statistictype name="NotDuplicate">
+    <t>Not Duplicate</t>
+  </statistictype>
+  <statistictype name="ColumnNames">
+    <t>Column Names</t>
+  </statistictype>
+  <statistictype name="ColumnsCompared">
+    <t>Columns Compared</t>
+  </statistictype>
+  <statistictype name="ColumnComparisons">
+    <t>Column Comparisons</t>
+  </statistictype>
+  <statistictype name="StandardError">
+    <t>Standard Error</t>
+  </statistictype>
+  <statistictype name="LowerCI">
+    <t>Lower Confidence Interval</t>
+  </statistictype>
+  <statistictype name="UpperCI">
+    <t>Upper Confidence Interval</t>
+  </statistictype>
+  <statistictype name="LowerCIPercent">
+    <t>Lower Confidence Interval %</t>
+  </statistictype>
+  <statistictype name="UpperCIPercent">
+    <t>Upper Confidence Interval %</t>
+  </statistictype>
+  <statistictype name="ColumnStandardError">
+    <t>Column Standard Error</t>
+  </statistictype>
+  <statistictype name="ColumnStandardErrorOfMean">
+    <t>Column Standard Error of Mean</t>
+  </statistictype>
+  <statistictype name="Index">
+    <t>Index</t>
+  </statistictype>
+  <statistictype name="Observation">
+    <t>Observation</t>
+  </statistictype>
+  <control type="project">
+    <t>Phone 1</t>
+  </control>
+  <!--q4: Age-->
+  <table name="97f48ec3-87c5-4c39-b6c2-5229cc884666">
+    <t>q4: Age</t>
+    <control type="base">
+      <t>Total sample; Unweighted; base n = 713</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>15 and under</t>
+        </element>
+        <element>
+          <t>16-19 yrs</t>
+        </element>
+        <element>
+          <t>20-24 yrs</t>
+        </element>
+        <element>
+          <t>25-29 yrs</t>
+        </element>
+        <element>
+          <t>30-34 yrs</t>
+        </element>
+        <element>
+          <t>35-44 yrs</t>
+        </element>
+        <element>
+          <t>45-54 yrs</t>
+        </element>
+        <element>
+          <t>55-64 yrs</t>
+        </element>
+        <element>
+          <t>65 and over</t>
+        </element>
+        <element>
+          <t>Don't know</t>
+        </element>
+        <element>
+          <t>NET</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <summary>
+          <t>%</t>
+        </summary>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <data>
+      <r>
+        <c>
+          <v>.140</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>10.238</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>32.118</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>14.727</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>3.506</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>4.909</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>27.489</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>5.049</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>1.823</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>.000</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>100.000</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Q5. Unaided Awareness by BANNER-->
+  <table name="76ba6951-b0f1-472f-b86a-8a496bc7815b">
+    <t>Q5. Unaided Awareness by BANNER</t>
+    <control type="base">
+      <t>Total sample; Unweighted; base n = 713</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>AAPT/Cellular One</t>
+        </element>
+        <element>
+          <t>New Tel</t>
+        </element>
+        <element>
+          <t>One-tel</t>
+        </element>
+        <element>
+          <t>Optus</t>
+        </element>
+        <element>
+          <t>Orange (Hutchison)</t>
+        </element>
+        <element>
+          <t>Telstra (Mobile Net)</t>
+        </element>
+        <element>
+          <t>Virgin Mobile</t>
+        </element>
+        <element>
+          <t>Vodafone</t>
+        </element>
+        <element>
+          <t>Other 1</t>
+        </element>
+        <element>
+          <t>Other 2</t>
+        </element>
+        <element>
+          <t>Don't know</t>
+        </element>
+        <element>
+          <t>NET</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <group>
+          <t>Age</t>
+          <element>
+            <t>Under 35</t>
+          </element>
+          <element>
+            <t>35 and over</t>
+          </element>
+        </group>
+        <group>
+          <t>Gender</t>
+          <element>
+            <t>Male</t>
+          </element>
+          <element>
+            <t>Female</t>
+          </element>
+        </group>
+        <group>
+          <t>Current provider</t>
+          <element>
+            <t>Telstra</t>
+          </element>
+          <element>
+            <t>Optus</t>
+          </element>
+          <element>
+            <t>Vodafone</t>
+          </element>
+          <element>
+            <t>Other</t>
+          </element>
+        </group>
+        <group>
+          <element>
+            <t>NET</t>
+          </element>
+        </group>
+      </group>
+    </edge>
+    <statistic type="ColumnPercent" />
+    <data>
+      <r>
+        <c>
+          <v>8.545%</v>
+          <v>7.143%</v>
+          <v>9.792%</v>
+          <v>6.383%</v>
+          <v>7.447%</v>
+          <v>9.854%</v>
+          <v>4.975%</v>
+          <v>12.000%</v>
+          <v>7.994%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>3.233%</v>
+          <v>.714%</v>
+          <v>3.264%</v>
+          <v>1.330%</v>
+          <v>1.064%</v>
+          <v>2.190%</v>
+          <v>1.990%</v>
+          <v>8.000%</v>
+          <v>2.244%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>24.711%</v>
+          <v>22.857%</v>
+          <v>21.958%</v>
+          <v>25.798%</v>
+          <v>28.191%</v>
+          <v>27.007%</v>
+          <v>16.915%</v>
+          <v>20.000%</v>
+          <v>23.983%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>90.531%</v>
+          <v>87.500%</v>
+          <v>89.021%</v>
+          <v>89.628%</v>
+          <v>87.234%</v>
+          <v>97.080%</v>
+          <v>83.582%</v>
+          <v>78.000%</v>
+          <v>89.341%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>43.418%</v>
+          <v>43.214%</v>
+          <v>43.917%</v>
+          <v>42.819%</v>
+          <v>41.489%</v>
+          <v>47.080%</v>
+          <v>34.826%</v>
+          <v>64.000%</v>
+          <v>43.338%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>81.755%</v>
+          <v>87.500%</v>
+          <v>81.306%</v>
+          <v>86.436%</v>
+          <v>96.809%</v>
+          <v>83.577%</v>
+          <v>73.134%</v>
+          <v>82.000%</v>
+          <v>84.011%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>32.102%</v>
+          <v>12.857%</v>
+          <v>27.003%</v>
+          <v>22.340%</v>
+          <v>19.681%</v>
+          <v>28.102%</v>
+          <v>22.388%</v>
+          <v>32.000%</v>
+          <v>24.544%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>88.684%</v>
+          <v>62.500%</v>
+          <v>81.306%</v>
+          <v>75.798%</v>
+          <v>63.298%</v>
+          <v>78.102%</v>
+          <v>96.020%</v>
+          <v>66.000%</v>
+          <v>78.401%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>6.005%</v>
+          <v>6.429%</v>
+          <v>6.528%</v>
+          <v>5.851%</v>
+          <v>5.319%</v>
+          <v>6.204%</v>
+          <v>2.985%</v>
+          <v>22.000%</v>
+          <v>6.171%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>.462%</v>
+          <v>.714%</v>
+          <v>.593%</v>
+          <v>.532%</v>
+          <v>.532%</v>
+          <v>.365%</v>
+          <v>.498%</v>
+          <v>2.000%</v>
+          <v>.561%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>.693%</v>
+          <v>.000%</v>
+          <v>.593%</v>
+          <v>.266%</v>
+          <v>.532%</v>
+          <v>.000%</v>
+          <v>.995%</v>
+          <v>.000%</v>
+          <v>.421%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>100.000%</v>
+          <v>100.000%</v>
+          <v>100.000%</v>
+          <v>100.000%</v>
+          <v>100.000%</v>
+          <v>100.000%</v>
+          <v>100.000%</v>
+          <v>100.000%</v>
+          <v>100.000%</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Q20. Image-->
+  <table name="2d5c7893-ab88-4a7e-90f4-c9b5634b577e">
+    <t>Q20. Image</t>
+    <control type="base">
+      <t>Total sample; Unweighted; base n = 713</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>AAPT/Cellular One</t>
+        </element>
+        <element>
+          <t>New Tel</t>
+        </element>
+        <element>
+          <t>One-tel</t>
+        </element>
+        <element>
+          <t>Optus</t>
+        </element>
+        <element>
+          <t>Orange (Hutchison)</t>
+        </element>
+        <element>
+          <t>Telstra (Mobile Net)</t>
+        </element>
+        <element>
+          <t>Virgin Mobile</t>
+        </element>
+        <element>
+          <t>Vodafone</t>
+        </element>
+        <element>
+          <t>NET</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <element>
+          <t>Bureaucratic</t>
+        </element>
+        <element>
+          <t>Slow service</t>
+        </element>
+        <element>
+          <t>Friendly</t>
+        </element>
+        <element>
+          <t>Low prices</t>
+        </element>
+        <element>
+          <t>Fashionable</t>
+        </element>
+        <element>
+          <t>Unfashionable</t>
+        </element>
+        <element>
+          <t>Reliable</t>
+        </element>
+        <element>
+          <t>Here today, gone tomorrow</t>
+        </element>
+        <element>
+          <t>Good coverage</t>
+        </element>
+        <element>
+          <t>Network often down</t>
+        </element>
+        <element>
+          <t>The best phones</t>
+        </element>
+        <element>
+          <t>Conveniently located stores</t>
+        </element>
+        <element>
+          <t>High prices</t>
+        </element>
+        <element>
+          <t>Unreliable</t>
+        </element>
+        <element>
+          <t>Meet all my communication needs</t>
+        </element>
+        <element>
+          <t>Leaders in mobile phone technology</t>
+        </element>
+        <element>
+          <t>I like them</t>
+        </element>
+        <element>
+          <t>I hate them</t>
+        </element>
+        <element>
+          <t>Don't know much about them</t>
+        </element>
+        <element>
+          <t>NET</t>
+        </element>
+      </group>
+    </edge>
+    <statistic type="Percent" />
+    <data>
+      <r>
+        <c>
+          <v>17.952%</v>
+          <v>23.422%</v>
+          <v>16.971%</v>
+          <v>17.532%</v>
+          <v>11.501%</v>
+          <v>34.362%</v>
+          <v>9.537%</v>
+          <v>15.708%</v>
+          <v>3.787%</v>
+          <v>33.380%</v>
+          <v>10.659%</v>
+          <v>4.488%</v>
+          <v>11.360%</v>
+          <v>22.861%</v>
+          <v>11.360%</v>
+          <v>10.940%</v>
+          <v>14.446%</v>
+          <v>38.008%</v>
+          <v>63.955%</v>
+          <v>94.530%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>13.885%</v>
+          <v>22.300%</v>
+          <v>10.098%</v>
+          <v>11.360%</v>
+          <v>9.958%</v>
+          <v>29.173%</v>
+          <v>6.171%</v>
+          <v>36.045%</v>
+          <v>2.104%</v>
+          <v>33.661%</v>
+          <v>9.397%</v>
+          <v>3.506%</v>
+          <v>7.714%</v>
+          <v>32.258%</v>
+          <v>9.397%</v>
+          <v>8.415%</v>
+          <v>12.342%</v>
+          <v>37.728%</v>
+          <v>72.791%</v>
+          <v>94.250%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>20.617%</v>
+          <v>38.289%</v>
+          <v>12.062%</v>
+          <v>20.757%</v>
+          <v>11.360%</v>
+          <v>39.691%</v>
+          <v>5.891%</v>
+          <v>89.201%</v>
+          <v>2.525%</v>
+          <v>46.844%</v>
+          <v>9.677%</v>
+          <v>3.647%</v>
+          <v>8.275%</v>
+          <v>66.199%</v>
+          <v>10.379%</v>
+          <v>8.415%</v>
+          <v>13.464%</v>
+          <v>57.644%</v>
+          <v>24.404%</v>
+          <v>98.878%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>34.502%</v>
+          <v>37.868%</v>
+          <v>42.076%</v>
+          <v>37.728%</v>
+          <v>33.520%</v>
+          <v>26.367%</v>
+          <v>47.966%</v>
+          <v>3.506%</v>
+          <v>35.764%</v>
+          <v>53.015%</v>
+          <v>44.460%</v>
+          <v>63.534%</v>
+          <v>23.703%</v>
+          <v>24.965%</v>
+          <v>48.948%</v>
+          <v>45.161%</v>
+          <v>49.649%</v>
+          <v>40.673%</v>
+          <v>6.452%</v>
+          <v>99.158%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>16.830%</v>
+          <v>26.087%</v>
+          <v>27.910%</v>
+          <v>38.289%</v>
+          <v>36.325%</v>
+          <v>25.526%</v>
+          <v>11.921%</v>
+          <v>13.604%</v>
+          <v>7.013%</v>
+          <v>34.362%</v>
+          <v>21.739%</v>
+          <v>15.849%</v>
+          <v>11.360%</v>
+          <v>22.440%</v>
+          <v>16.410%</v>
+          <v>20.757%</v>
+          <v>25.947%</v>
+          <v>37.868%</v>
+          <v>28.331%</v>
+          <v>95.933%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>79.243%</v>
+          <v>45.442%</v>
+          <v>27.209%</v>
+          <v>13.745%</v>
+          <v>21.318%</v>
+          <v>51.332%</v>
+          <v>64.656%</v>
+          <v>1.823%</v>
+          <v>72.791%</v>
+          <v>34.783%</v>
+          <v>39.551%</v>
+          <v>61.431%</v>
+          <v>70.407%</v>
+          <v>19.635%</v>
+          <v>46.424%</v>
+          <v>58.205%</v>
+          <v>37.588%</v>
+          <v>50.351%</v>
+          <v>5.049%</v>
+          <v>100.000%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>14.165%</v>
+          <v>19.776%</v>
+          <v>32.539%</v>
+          <v>36.185%</v>
+          <v>37.167%</v>
+          <v>20.757%</v>
+          <v>9.257%</v>
+          <v>14.306%</v>
+          <v>4.208%</v>
+          <v>30.996%</v>
+          <v>15.428%</v>
+          <v>10.098%</v>
+          <v>9.677%</v>
+          <v>18.513%</v>
+          <v>12.623%</v>
+          <v>12.202%</v>
+          <v>23.422%</v>
+          <v>33.661%</v>
+          <v>47.686%</v>
+          <v>95.372%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>21.038%</v>
+          <v>23.843%</v>
+          <v>43.478%</v>
+          <v>34.783%</v>
+          <v>52.595%</v>
+          <v>19.074%</v>
+          <v>45.302%</v>
+          <v>3.086%</v>
+          <v>43.899%</v>
+          <v>34.362%</v>
+          <v>44.741%</v>
+          <v>53.997%</v>
+          <v>21.459%</v>
+          <v>15.849%</v>
+          <v>43.058%</v>
+          <v>44.600%</v>
+          <v>50.491%</v>
+          <v>35.344%</v>
+          <v>11.360%</v>
+          <v>99.018%</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>95.792%</v>
+          <v>96.494%</v>
+          <v>96.073%</v>
+          <v>99.719%</v>
+          <v>97.475%</v>
+          <v>98.738%</v>
+          <v>99.158%</v>
+          <v>100.000%</v>
+          <v>99.299%</v>
+          <v>98.738%</v>
+          <v>86.115%</v>
+          <v>96.634%</v>
+          <v>92.006%</v>
+          <v>96.914%</v>
+          <v>95.933%</v>
+          <v>96.353%</v>
+          <v>99.158%</v>
+          <v>95.652%</v>
+          <v>93.689%</v>
+          <v>100.000%</v>
+        </c>
+      </r>
+    </data>
+  </table>
+  <!--Time (in weeks) by q4: Age-->
+  <table name="fe8d872f-ec02-4fbe-b94f-ec76eeae9009">
+    <t>Time (in weeks) by q4: Age</t>
+    <control type="base">
+      <t>Total sample; Unweighted; base n = from 369 to 711; total n = 713; 344 missing</t>
+    </control>
+    <edge axis="r">
+      <group>
+        <element>
+          <t>with current company</t>
+        </element>
+        <element>
+          <t>until contract expires</t>
+        </element>
+        <element>
+          <t>with current phone</t>
+        </element>
+        <element>
+          <t>since first phone</t>
+        </element>
+        <element>
+          <t>until next phone</t>
+        </element>
+        <element>
+          <t>SUM</t>
+        </element>
+      </group>
+    </edge>
+    <edge axis="c">
+      <group>
+        <element>
+          <t>15 and under</t>
+        </element>
+        <element>
+          <t>16-19 yrs</t>
+        </element>
+        <element>
+          <t>20-24 yrs</t>
+        </element>
+        <element>
+          <t>25-29 yrs</t>
+        </element>
+        <element>
+          <t>30-34 yrs</t>
+        </element>
+        <element>
+          <t>35-44 yrs</t>
+        </element>
+        <element>
+          <t>45-54 yrs</t>
+        </element>
+        <element>
+          <t>55-64 yrs</t>
+        </element>
+        <element>
+          <t>65 and over</t>
+        </element>
+        <element>
+          <t>Don't know</t>
+        </element>
+        <element>
+          <t>NET</t>
+        </element>
+      </group>
+    </edge>
+    <statistic type="Average" />
+    <data>
+      <r>
+        <c>
+          <v>13.000</v>
+          <v>62.589</v>
+          <v>85.321</v>
+          <v>126.695</v>
+          <v>117.560</v>
+          <v>110.229</v>
+          <v>139.521</v>
+          <v>151.583</v>
+          <v>181.115</v>
+          <v> - </v>
+          <v>111.171</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>130.000</v>
+          <v>53.500</v>
+          <v>41.944</v>
+          <v>42.091</v>
+          <v>32.179</v>
+          <v>33.158</v>
+          <v>45.008</v>
+          <v>47.278</v>
+          <v>50.625</v>
+          <v> - </v>
+          <v>43.868</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>13.000</v>
+          <v>43.890</v>
+          <v>49.434</v>
+          <v>60.852</v>
+          <v>73.600</v>
+          <v>71.200</v>
+          <v>65.469</v>
+          <v>72.083</v>
+          <v>102.917</v>
+          <v> - </v>
+          <v>58.868</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>13.000</v>
+          <v>118.205</v>
+          <v>151.518</v>
+          <v>229.135</v>
+          <v>195.167</v>
+          <v>180.697</v>
+          <v>213.722</v>
+          <v>180.314</v>
+          <v>187.417</v>
+          <v> - </v>
+          <v>180.717</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>130.000</v>
+          <v>62.242</v>
+          <v>51.699</v>
+          <v>59.575</v>
+          <v>57.786</v>
+          <v>59.375</v>
+          <v>71.147</v>
+          <v>46.479</v>
+          <v>74.333</v>
+          <v> - </v>
+          <v>59.647</v>
+        </c>
+      </r>
+      <r>
+        <c>
+          <v>299.000</v>
+          <v>355.674</v>
+          <v>375.123</v>
+          <v>508.690</v>
+          <v>512.643</v>
+          <v>449.154</v>
+          <v>532.826</v>
+          <v>475.833</v>
+          <v>978.750</v>
+          <v> - </v>
+          <v>445.546</v>
+        </c>
+      </r>
+    </data>
+  </table>
+</xtab>
