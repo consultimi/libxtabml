@@ -380,7 +380,7 @@ impl XtabMLParser {
                             }
                         }
                         _ => {
-                            println!("Got unexpected key: {:?}", name);
+                            //eprintln!("Got unexpected key: {:?}", name);
                         }
                     }
                 }
